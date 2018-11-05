@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing:inherit; 
+}
+
+/*changing our font-size to 10px makes our life easier
+now one rem is 10 px 
+we are operating under the assume that the user is operating under the base 16px 
+so 1rem=10px
+*/
+:root{
+    font-size:62.5%;
+}
+
+body{
+    box-sizing:border-box;
+}
