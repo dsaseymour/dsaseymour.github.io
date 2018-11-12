@@ -18,3 +18,27 @@ so 1rem=10px
 body{
     box-sizing:border-box;
 }
+
+.grid__container {
+    display: grid;
+    /*
+      We'll have at least 6 rows 
+         Nav
+         Highlights
+         About Me
+         Portfolio
+         Contact
+         Footer
+    */
+    grid-template-rows: 80vw 80vw 40vw 80vw min-content 80vw;
+    grid-template-columns: [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [full-end];
+
+    @media only screen and (max-width: $bp-large) {
+
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+
+
+    }
+}

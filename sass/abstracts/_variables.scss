@@ -1,3 +1,6 @@
+/* //========================
+//COLORS BEGINS 
+//========================  */
 $color-primary:#7ed56f;
 $color-primary-light:#55c57a;
 $color-primary-dark:#28b485;
@@ -18,6 +21,42 @@ $color-white:#fff;
 $color-black: #000;
  
 
-
-//FONT
+/* //========================
+//COLORS ENDS 
+//========================  */
+/* //========================
+//FONT BEGINS 
+//========================  */
 $default-font-size: 1.6rem; 
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+
+
+
+
+
+
+
+/* //========================
+//FONT ENDS 
+//========================  */
+/* //========================
+//BREAKPOINTS BEGINS 
+//========================  */
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+
+
+
+
+
+
+
+
+/* //========================
+//BREAKPOINTS ENDS 
+//========================  */

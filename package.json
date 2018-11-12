@@ -7,9 +7,8 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "compile:sass": "node-sass -w sass/main.scss  css/main.css",
-    "live-server":"live-server"
+    "devserver": "live-server"
   },
   "repository": {
     "type": "git",
