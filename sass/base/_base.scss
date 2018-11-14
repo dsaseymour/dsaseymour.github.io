@@ -1,9 +1,9 @@
 *,
 *::after,
-*::before{
-    margin:0;
-    padding:0;
-    box-sizing:inherit; 
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 /*changing our font-size to 10px makes our life easier
@@ -11,17 +11,17 @@ now one rem is 10 px
 we are operating under the assume that the user is operating under the base 16px 
 so 1rem=10px
 */
-:root{
-    font-size:62.5%;
+:root {
+  font-size: 62.5%;
 }
 
-body{
-    box-sizing:border-box;
+body {
+  box-sizing: border-box;
 }
 
 .grid__container {
-    display: grid;
-    /*
+  display: grid;
+  /*
       We'll have at least 6 rows 
          Nav
          Highlights
@@ -30,15 +30,14 @@ body{
          Contact
          Footer
     */
-    grid-template-rows: 80vw 80vw 40vw 80vw min-content 80vw;
-    grid-template-columns: [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [full-end];
+  grid-template-rows: 80vw 80vw 40vw 80vw min-content 80vw;
+  grid-template-columns:
+    [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [full-end];
 
-    @media only screen and (max-width: $bp-large) {
+  @media only screen and (max-width: $bp-large) {
+  }
 
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-
-
-    }
+  @media only screen and (max-width: $bp-medium) {
+  }
 }
