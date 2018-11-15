@@ -13,7 +13,10 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous" />
 -->    
- <link rel="stylesheet" href="css/main.css" />
+<!-------------------------- CSS START -------------------------->
+<link rel="stylesheet" href="css/main.css" />
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<!-------------------------- CSS END -------------------------->
 </head>
 
 <body class="grid_container">
@@ -21,8 +24,8 @@
     <div class="navigation">
         <div class="navigation__logo-box">
             <picture class="navigation__logo">
-                <source srcset="#" media="(max-width: 37.5em)">
-                <img srcset="#" alt="Full logo" src="#">
+                <source srcset="img/logo.png" media="(max-width: 37.5em)">
+                <img srcset="img/logo.png" alt="Full logo" src="img/logo.png">
             </picture>
 
         </div>
@@ -41,9 +44,38 @@
     <header class="header">
         <!-- HEADER START -->
         THIS IS THE HEADER
-        
+        <div class="hpanel">
+            <div class="hpanel__heading">
+                    <h1>How can I find other developers with similar interests and skills?</h1>
+                <span class="hpanel__projectname">Dev Connector <i class="fab fa-react"></i> 
+                    <i class="fab fa-node"></i> 
+                </span>
+            </div>
+            <div class="hpanel__content">
+                <div class="hpanel__content-card hpanel__video">
+                        <video class="hpanel__video-content" autoplay muted loop>
+                                <source src="img/devconnector/video.mp4" type="video/mp4">
+                                <source src="img/devconnector/video.webm" type="video/webm">
+                                Your browser is not supported!
+                            </video>
+                </div>
 
+                <div class="hpanel__content-card">
 
+                    HPANEL CONTENT CARD 
+                    
+                </div>
+
+                <div class="hpanel__content-card hpanel__details">
+
+                        HPANEL CONTENT CARD DETAILS
+
+                    
+                </div>
+    
+
+            </div>
+        </div>
 
         <!-- HEADER END -->
     </header>
@@ -52,14 +84,17 @@
         THIS IS THE ABOUT SECTION 
 
         <figure class="about__shape">
-            <img src="#" alt="Picture of Danny Seymour" class="about__img">
+            <img src="./img/danny.jpg" alt="Picture of Danny Seymour" class="about__img">
             <figcaption class="about__caption"></figcaption>
         </figure>
 
         <div class="about__text-box">
-            <div class="about__socialrow">
-                LinkedinIcon GitHubIcon EmailIcon CodePenIcon
-            </div>
+            <ul class="about__socialrow">
+                    <li><i class="fab fa-linkedin"></i></li>
+                    <li><i class="fab fa-github-square"></i></li>
+                    <li><i class="fab fa-envelope-square"></i></li>
+                    <li><i class="fab fa-codepen"></i></li>
+            </ul>
         </div>
 
         <!-- ABOUT END -->
