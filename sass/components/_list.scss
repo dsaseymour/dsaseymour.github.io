@@ -1,0 +1,12 @@
+.list {
+  list-style: none;
+  margin: 0 auto;
+
+  li {
+    font-size: 1.5rem;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}

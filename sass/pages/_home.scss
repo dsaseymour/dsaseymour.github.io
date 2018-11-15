@@ -1,14 +1,60 @@
+//ABOUT SECTION BEGINS----------------------------------
 .section-about {
   background-color: pink;
   grid-column: full-start / full-end;
+  display: grid;
+  //6*6 grid
+  grid-template-rows:
+    [aboutrow-fullstart] repeat(
+      6,
+      [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]
+    )
+    [aboutrow-fullend];
+  grid-template-columns:
+    [aboutcol-fullstart] repeat(
+      6,
+      [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]
+    )
+    [aboutcol-fullstart];
 }
 
+.about___figure {
+  padding: 1.25rem;
+  grid-column: aboutcol-fullstart / aboutcol-end 2;
+  grid-row: aboutrow-fullstart/ aboutrow-fullend;
+}
+
+.about__shape {
+  width: 9rem;
+  height: 9rem;
+  overflow: hidden;
+}
+
+.about__img {
+  height: 100%;
+}
+
+.about__caption {
+}
+.about__text-box {
+  padding: 1.25rem;
+  grid-column: aboutcol-start 5 / aboutcolumn-fullend;
+  grid-row: aboutrow-fullstart/ aboutrow-fullend;
+}
+.about__socialrow {
+}
+
+//ABOUT SECTION ENDS-----------------------------------
+//PORTFOLIO SECTION BEGINS-------------------------
 .section-portfolio {
   background-color: green;
   grid-column: full-start / full-end;
 }
 
+//PORTFOLIO SECTION END-------------------------
+//CONTACT SECTION END-------------------------
 .section-contact {
   background-color: orange;
   grid-column: full-start / full-end;
 }
+//CONTACT SECTION END-------------------------

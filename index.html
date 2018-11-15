@@ -32,7 +32,7 @@
 
 
         <div class="navigation__background"></div>
-        <ul class="navigation__list">
+        <ul class="navigation__list list">
             <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
             <li class="navigation__item"><a href="" class="navigation__link">Portfolio</a></li>
             <li class="navigation__item"><a href="" class="navigation__link">About</a></li>
@@ -81,19 +81,28 @@
     </header>
     <section class="section-about">
         <!-- ABOUT START -->
-        THIS IS THE ABOUT SECTION 
-
-        <figure class="about__shape">
-            <img src="./img/danny.jpg" alt="Picture of Danny Seymour" class="about__img">
-            <figcaption class="about__caption"></figcaption>
-        </figure>
+        <div class="about___figure">
+                <figure class="about__shape">
+                        <img src="./img/danny.jpg" alt="Picture of Danny Seymour" class="about__img">
+                        <figcaption class="about__caption"></figcaption>
+                    </figure>            
+        </div>
 
         <div class="about__text-box">
-            <ul class="about__socialrow">
-                    <li><i class="fab fa-linkedin"></i></li>
-                    <li><i class="fab fa-github-square"></i></li>
-                    <li><i class="fab fa-envelope-square"></i></li>
-                    <li><i class="fab fa-codepen"></i></li>
+
+            My name is Danny Seymour. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptatum repellat sint! Aspernatur nisi eaque error cum voluptates. Id voluptates modi architecto tempora debitis praesentium ipsam consequuntur mollitia aperiam dicta.
+
+            <ul class="about__socialrow list">
+                    <li>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-github-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">                        <i class="fab fa-codepen"></i>
+                        </a>
+                    </li>
             </ul>
         </div>
 
@@ -116,8 +125,36 @@
         <!-- PORTFOLIO END -->
     </section>
     <section class="section-contact">
-        THIS IS THE CONTACT SECTION
+        <div class="form contact__form">
+            <form name="input" method="POST" action="https://formspree.io/danny.saseymour@gmail.com" class="form">
+                <div class="u-margin-bottom-medium">
+                    <h2 >
+                        Contact
+                    </h2>
+                </div>
 
+                <div class="form__group">
+                    <input type="text" class="form__input" placeholder="Name" id="name" required>
+                    <label for="name" class="form__label">Name</label>
+                </div>
+
+                <div class="form__group">
+                    <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                    <label for="email" class="form__label">Email address</label>
+                </div>
+
+                <div class="form__group u-margin-bottom-medium">
+                        <input type="text" class="form__input" placeholder="Message" id="message" required>
+                        <textarea id="message" name="message" placeholder="Message" ></textarea>
+                        <label for="message" class="form__label">Message</label>    
+                </div>
+
+                <div class="form__group">
+                    <input type="submit" value="Send" class="btn btn--green">
+                </div>
+            </form>
+        </div>
+    </div>
 
     </section>
     <footer class="footer">
@@ -129,7 +166,7 @@
             </picture>
         </div>
         <div class="footer__navigation">
-            <ul class="footer__list">
+            <ul class="footer__list list">
                 <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
                 <li class="footer__item"><a href="#" class="footer__link">Portfolio</a></li>
                 <li class="footer__item"><a href="#" class="footer__link">About</a></li>
