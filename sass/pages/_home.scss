@@ -1,16 +1,14 @@
-.section-projects{
-
-
-
-
+.section-about {
+  background-color: pink;
+  grid-column: full-start / full-end;
 }
 
+.section-portfolio {
+  background-color: green;
+  grid-column: full-start / full-end;
+}
 
-.section-skills{
-
-
-
-
-
-    
+.section-contact {
+  background-color: orange;
+  grid-column: full-start / full-end;
 }

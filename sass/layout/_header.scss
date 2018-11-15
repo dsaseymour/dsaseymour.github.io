@@ -1,19 +1,11 @@
 .header {
-  background-color: $color-grey-dark-1;
-  grid-column: full-start / col-end 6;
-  background-image: linear-gradient(
-      rgba($color-secondary, 0.93),
-      rgba($color-secondary, 0.93)
-    ),
-    url(../img/hero.jpeg);
-  background-size: cover;
-  background-position: center;
-  padding: 8rem;
-  padding-top: 4rem;
-
+  grid-column: full-start / full-end;
+  background-color: red;
   display: grid;
   grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
   grid-template-columns: minmax(min-content, max-content);
-  grid-row-gap: 1.5rem;
-  justify-content: center;
+
+  &__panel {
+    //components that will in the future each be used on a carousel
+  }
 }

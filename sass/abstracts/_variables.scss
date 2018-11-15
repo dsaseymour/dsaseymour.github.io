@@ -1,25 +1,23 @@
 /* //========================
 //COLORS BEGINS 
 //========================  */
-$color-primary:#7ed56f;
-$color-primary-light:#55c57a;
-$color-primary-dark:#28b485;
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
 
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
 
 $color-tertiary-light: #2998ff;
-$color-tertiary-dark:   #5643fa;
+$color-tertiary-dark: #5643fa;
 
-$color-grey-light-1:#f7f7f7; 
-$color-grey-light-2:#eee;
-
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
-$color-white:#fff;
+$color-white: #fff;
 $color-black: #000;
- 
 
 /* //========================
 //COLORS ENDS 
@@ -27,16 +25,9 @@ $color-black: #000;
 /* //========================
 //FONT BEGINS 
 //========================  */
-$default-font-size: 1.6rem; 
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
-
-
-
-
-
-
-
+$default-font-size: 1.6rem;
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
 
 /* //========================
 //FONT ENDS 
@@ -44,18 +35,10 @@ $font-display: 'Josefin Sans', sans-serif;
 /* //========================
 //BREAKPOINTS BEGINS 
 //========================  */
-$bp-largest: 75em;   // 1200px
-$bp-large: 62.5em;   // 1000px
-$bp-medium: 50em;    // 800px;
-$bp-small: 37.5em;    // 600px;
-
-
-
-
-
-
-
-
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
 
 /* //========================
 //BREAKPOINTS ENDS 

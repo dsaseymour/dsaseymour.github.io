@@ -16,6 +16,20 @@ so 1rem=10px
 body {
   box-sizing: border-box; }
 
+.grid__container {
+  display: grid;
+  /*
+      We'll have at least 6 rows 
+         Nav
+         Highlights
+         About Me
+         Portfolio
+         Contact
+         Footer
+    */
+  grid-template-rows: 80vw 80vw 40vw 80vw min-content 80vw;
+  grid-template-columns: [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [full-end]; }
+
 .u-center-text {
   text-align: center; }
 
@@ -42,3 +56,56 @@ body {
 
 .u-margin-bottom-huge {
   margin-bottom: 10rem; }
+
+/* Visually Debugging
+* *:not(path):not(g) {
+    color:                    hsla(210, 100%, 100%, 0.9) !important;
+    background:               hsla(210, 100%,  50%, 0.5) !important;
+    outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+    box-shadow: none !important;
+}
+*/
+/* //========================
+//COLORS BEGINS 
+//========================  */
+/* //========================
+//COLORS ENDS 
+//========================  */
+/* //========================
+//FONT BEGINS 
+//========================  */
+/* //========================
+//FONT ENDS 
+//========================  */
+/* //========================
+//BREAKPOINTS BEGINS 
+//========================  */
+/* //========================
+//BREAKPOINTS ENDS 
+//========================  */
+.section-about {
+  background-color: pink;
+  grid-column: full-start / full-end; }
+
+.section-portfolio {
+  background-color: green;
+  grid-column: full-start / full-end; }
+
+.section-contact {
+  background-color: orange;
+  grid-column: full-start / full-end; }
+
+.navigation {
+  background-color: blue;
+  grid-column: full-start / full-end; }
+
+.header {
+  grid-column: full-start / full-end;
+  background-color: red;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content); }
+
+.footer {
+  background-color: purple;
+  grid-column: full-start / full-end; }
