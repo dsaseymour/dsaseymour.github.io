@@ -2,59 +2,119 @@
 .section-about {
   background-color: pink;
   grid-column: full-start / full-end;
+  grid-row: about-start/about-end;
   display: grid;
+  padding: 1.5rem;
   //6*6 grid
   grid-template-rows:
     [aboutrow-fullstart] repeat(
-      6,
+      1,
       [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]
     )
     [aboutrow-fullend];
   grid-template-columns:
-    [aboutcol-fullstart] repeat(
-      6,
+    [aboutcol-fullstart] 1fr repeat(
+      4,
       [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]
     )
-    [aboutcol-fullstart];
+    1fr
+    [aboutcol-fullend];
 }
 
-.about___figure {
+.about___img-box {
   padding: 1.25rem;
-  grid-column: aboutcol-fullstart / aboutcol-end 2;
+  grid-column: aboutcol-start 1 / aboutcol-end 1;
   grid-row: aboutrow-fullstart/ aboutrow-fullend;
 }
-
 .about__shape {
-  width: 9rem;
-  height: 9rem;
-  overflow: hidden;
+  height: 15rem;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
 }
 
 .about__img {
   height: 100%;
 }
 
-.about__caption {
-}
 .about__text-box {
   padding: 1.25rem;
-  grid-column: aboutcol-start 5 / aboutcolumn-fullend;
+  grid-column: aboutcol-start 3 / aboutcol-end 4;
   grid-row: aboutrow-fullstart/ aboutrow-fullend;
 }
 .about__socialrow {
 }
 
-//ABOUT SECTION ENDS-----------------------------------
-//PORTFOLIO SECTION BEGINS-------------------------
+.aboutsocial__item {
+  display: inline-block;
+}
+
+// ABOUT SECTION ENDS-----------------------------------
+// PORTFOLIO SECTION BEGINS-------------------------
 .section-portfolio {
   background-color: green;
   grid-column: full-start / full-end;
+  grid-row: portfolio-start/portfolio-end;
+  display: grid;
+  grid-template-rows:
+    [aboutrow-fullstart] repeat(
+      1,
+      [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]
+    )
+    [aboutrow-fullend];
+  grid-template-columns:
+    [aboutcol-fullstart] 1fr repeat(
+      4,
+      [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]
+    )
+    1fr
+    [aboutcol-fullend];
 }
 
-//PORTFOLIO SECTION END-------------------------
-//CONTACT SECTION END-------------------------
+.portfolio___img-box {
+  padding: 1.25rem;
+  grid-column: aboutcol-start 3 / aboutcol-end 4;
+  grid-row: aboutrow-fullstart/ aboutrow-fullend;
+}
+
+.portfolio__shape {
+  height: 15rem;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.portfolio__img {
+  height: 100%;
+}
+
+.portfolio__text-box {
+  padding: 1.25rem;
+  grid-column: aboutcol-start 1 / aboutcol-end 1;
+  grid-row: aboutrow-fullstart/ aboutrow-fullend;
+}
+
+.portfoliotext__item {
+  display: inline-block;
+}
+
+// PORTFOLIO SECTION END-------------------------
+// CONTACT SECTION END-------------------------
 .section-contact {
   background-color: orange;
   grid-column: full-start / full-end;
+  grid-row: contact-start/contact-end;
+  display: grid;
+  grid-template-rows:
+    [aboutrow-fullstart] repeat(
+      1,
+      [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]
+    )
+    [aboutrow-fullend];
+  grid-template-columns:
+    [aboutcol-fullstart] 1fr repeat(
+      4,
+      [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]
+    )
+    1fr
+    [aboutcol-fullend];
 }
-//CONTACT SECTION END-------------------------
+// CONTACT SECTION END-------------------------

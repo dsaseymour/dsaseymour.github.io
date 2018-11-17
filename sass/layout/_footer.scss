@@ -1,8 +1,32 @@
 .footer {
+  padding: 0.5rem;
   background-color: purple;
   grid-column: full-start / full-end;
+  grid-row: footer-start/footer-end;
+  display: grid;
+  grid-template-rows: [footertoprow-start]80vw[footertoprow-end] [footerbottomrow-start] 80vw [footerbottomrow-end];
+
+  &__top {
+    padding: 0.5rem;
+    grid-row: footertoprow-start/footertoprow-end;
+    display: grid;
+    grid-template-columns: 1fr [footerlogo-start]14rem [footerlogo-end]1fr;
+  }
+  &__bottom {
+    grid-row: footerbottomrow-start/footerbottomrow-end;
+    display: grid;
+    grid-template-columns: 14rem 1fr 14rem;
+  }
+
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 0.2rem;
+    }
+  }
 
   &__logo-box {
+    grid-column: footerlogo-start/footer-logoend;
   }
 
   &__logo {
@@ -12,11 +36,6 @@
   }
 
   &__list {
-  }
-
-  &__item {
-    &:not(:last-child) {
-    }
   }
 
   &__link {

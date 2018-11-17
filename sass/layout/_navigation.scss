@@ -1,6 +1,30 @@
 .navigation {
+  padding: 0.5rem;
   background-color: blue;
   grid-column: full-start / full-end;
+  grid-row: nav-start/nav-end;
+  display: grid;
+  grid-template-columns: 1fr [leftcol-start]min-content [leftcol-end] 3fr [rightcol-start] 20rem [rightcol-end] 1fr;
+
+  &__logo-box {
+    grid-column: leftcol-start / leftcol-end;
+    background-color: red;
+  }
+
+  &__list-box {
+    grid-column: rightcol-start / rightcol-end;
+    background-color: green;
+  }
+
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 0.2rem;
+    }
+  }
+}
+
+/*
 
   &__checkbox {
   }
@@ -29,4 +53,4 @@
     &:active {
     }
   }
-}
+  */

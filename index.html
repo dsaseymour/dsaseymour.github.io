@@ -32,18 +32,21 @@
 
 
         <div class="navigation__background"></div>
-        <ul class="navigation__list list">
-            <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
-            <li class="navigation__item"><a href="" class="navigation__link">Portfolio</a></li>
-            <li class="navigation__item"><a href="" class="navigation__link">About</a></li>
-            <li class="navigation__item"><a href="" class="navigation__link">Contact</a></li>
-        </ul>
+        <div class="navigation__list-box">
+                <ul class="navigation__list list">
+                        <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
+                        <li class="navigation__item"><a href="" class="navigation__link">Portfolio</a></li>
+                        <li class="navigation__item"><a href="" class="navigation__link">About</a></li>
+                        <li class="navigation__item"><a href="" class="navigation__link">Contact</a></li>
+                    </ul>
+
+        </div>
+
     </div>
     <!-- NAVBAR END -->
 
     <header class="header">
         <!-- HEADER START -->
-        THIS IS THE HEADER
         <div class="hpanel">
             <div class="hpanel__heading">
                     <h1>How can I find other developers with similar interests and skills?</h1>
@@ -81,25 +84,28 @@
     </header>
     <section class="section-about">
         <!-- ABOUT START -->
-        <div class="about___figure">
+        <div class="about___img-box">
                 <figure class="about__shape">
-                        <img src="./img/danny.jpg" alt="Picture of Danny Seymour" class="about__img">
-                        <figcaption class="about__caption"></figcaption>
-                    </figure>            
+                <img class="about__img" src="./img/danny.jpg"
+                alt="Picture of Danny Seymour"> 
+                </figure>
         </div>
+
+
+
 
         <div class="about__text-box">
 
             My name is Danny Seymour. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptatum repellat sint! Aspernatur nisi eaque error cum voluptates. Id voluptates modi architecto tempora debitis praesentium ipsam consequuntur mollitia aperiam dicta.
 
             <ul class="about__socialrow list">
-                    <li>
+                    <li class="aboutsocial__item">
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </li>
-                    <li>
+                    <li class="aboutsocial__item">
                         <a href="#"><i class="fab fa-github-square"></i></a>
                     </li>
-                    <li>
+                    <li class="aboutsocial__item">
                         <a href="#">                        <i class="fab fa-codepen"></i>
                         </a>
                     </li>
@@ -110,16 +116,29 @@
     </section>
     <section class="section-portfolio">
         <!-- PORTFOLIO START -->
-        THIS IS THE PORTFOLIO
         <div class="portfolio__text-box">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. In laudantium aspernatur optio illum quas nemo beatae esse voluptatibus cum natus velit corrupti, earum molestiae, sapiente ducimus maiores officia doloribus amet.
 
-
+          <ul class="portfolio__textrow list">
+                <li class="portfoliotext__item">
+                    <a href="#"><i class="fab fa-linkedin"></i>Portfolio</a>
+                </li>
+                <li class="portfoliotext__item">
+                    <a href="#"><i class="fab fa-github-square"></i>Resume</a>
+                </li>
+        </ul>
 
 
         </div>
-        <figure class="portfolio__shape">
-            <img src="#" alt="Portfolio Picture" class="portfolio__img">
-        </figure>
+
+
+        <div class="portfolio___img-box">
+                <figure class="portfolio__shape">
+                <img class="portfolio__img" src="./img/danny.jpg"
+                alt="Portfolio Image"> 
+                </figure>
+        </div>
+
 
 
         <!-- PORTFOLIO END -->
@@ -132,7 +151,6 @@
                         Contact
                     </h2>
                 </div>
-
                 <div class="form__group">
                     <input type="text" class="form__input" placeholder="Name" id="name" required>
                     <label for="name" class="form__label">Name</label>
@@ -144,8 +162,7 @@
                 </div>
 
                 <div class="form__group u-margin-bottom-medium">
-                        <input type="text" class="form__input" placeholder="Message" id="message" required>
-                        <textarea id="message" name="message" placeholder="Message" ></textarea>
+                        <textarea id="message" class="form__input" name="message" placeholder="Message" required ></textarea>
                         <label for="message" class="form__label">Message</label>    
                 </div>
 
@@ -158,26 +175,32 @@
 
     </section>
     <footer class="footer">
-        THIS IS THE FOOTER
-        <div class="footer__logo-box">
-            <picture class="footer__logo">
-                <source srcset="#" media="(max-width: 37.5em)">
-                <img srcset="#" alt="Full logo" src="#">
-            </picture>
+        <div class="footer__top">
+                <div class="footer__logo-box">
+                        <picture class="footer__logo">
+                            <source srcset="#" media="(max-width: 37.5em)">
+                            <img srcset="#" alt="Full logo" src="#">
+                        </picture>
+                    </div>
         </div>
-        <div class="footer__navigation">
-            <ul class="footer__list list">
-                <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Portfolio</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">About</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
-            </ul>
+        <div class="footer__bottom">
+                <div class="footer__navigation">
+                        <ul class="footer__list list">
+                            <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Portfolio</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <p class="footer__copyright">
+                            Built by Danny Seymour</a>
+                            Copyright &copy; by Danny Seymour.
+                        </p>
+            
         </div>
 
-        <p class="footer__copyright">
-            Built by Danny Seymour</a>
-            Copyright &copy; by Danny Seymour.
-        </p>
+
     </footer>
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. 
     <script>

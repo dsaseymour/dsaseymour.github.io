@@ -1,5 +1,7 @@
 .header {
   grid-column: full-start / full-end;
+  grid-row: header-start/header-end;
+
   background-color: red;
 }
 
@@ -15,10 +17,11 @@
   padding: 5rem;
   //---hpanel first row begins-------------------------------------------
   &__heading {
+    font-size: 0.5rem;
   }
 
   &__projectname {
-    font-size: 2rem;
+    font-size: 0.5rem;
   }
   //---hpanel first row ends-------------------------------------------
   //---hpanel content begins-------------------------------------------

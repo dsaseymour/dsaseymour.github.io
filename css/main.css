@@ -21,13 +21,13 @@ body {
   /*
       We'll have at least 6 rows 
          Nav
-         Highlights
+         Head
          About Me
          Portfolio
          Contact
          Footer
     */
-  grid-template-rows: 80vw 80vw 40vw 80vw min-content 80vw;
+  grid-template-rows: [nav-start] 80vw [nav-end] [header-start] 80vw [header-end] [about-start] 40vw [about-end] [portfolio-start] 80vw [portfolio-end] [contact-start] min-content [contact-end] [footer-start] 80vw [footer-end];
   grid-template-columns: [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [full-end]; }
 
 .u-center-text {
@@ -129,7 +129,9 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
 
 .form {
-  height: 20vh; }
+  padding: 1.5rem;
+  height: 100%;
+  grid-column: aboutcol-start 1 / aboutcol-end 4; }
   .form__group:not(:last-child) {
     margin-bottom: 2rem; }
   .form__input {
@@ -141,8 +143,7 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     border: none;
     border-bottom: 3px solid transparent;
-    width: 90%;
-    display: block; }
+    width: 80%; }
     .form__input:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -159,8 +160,7 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     margin-left: 2rem;
-    margin-top: 0.7rem;
-    display: block; }
+    margin-top: 0.7rem; }
 
 .hpanel__heading {
   font-size: 2.8rem;
@@ -180,42 +180,121 @@ body {
 .section-about {
   background-color: pink;
   grid-column: full-start / full-end;
+  grid-row: about-start/about-end;
   display: grid;
-  grid-template-rows: [aboutrow-fullstart] repeat(6, [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]) [aboutrow-fullend];
-  grid-template-columns: [aboutcol-fullstart] repeat(6, [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]) [aboutcol-fullstart]; }
+  padding: 1.5rem;
+  grid-template-rows: [aboutrow-fullstart] repeat(1, [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]) [aboutrow-fullend];
+  grid-template-columns: [aboutcol-fullstart] 1fr repeat(4, [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]) 1fr [aboutcol-fullend]; }
 
-.about___figure {
+.about___img-box {
   padding: 1.25rem;
-  grid-column: aboutcol-fullstart / aboutcol-end 2;
+  grid-column: aboutcol-start 1 / aboutcol-end 1;
   grid-row: aboutrow-fullstart/ aboutrow-fullend; }
 
 .about__shape {
-  width: 9rem;
-  height: 9rem;
-  overflow: hidden; }
+  height: 15rem;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); }
 
 .about__img {
   height: 100%; }
 
 .about__text-box {
   padding: 1.25rem;
-  grid-column: aboutcol-start 5 / aboutcolumn-fullend;
+  grid-column: aboutcol-start 3 / aboutcol-end 4;
   grid-row: aboutrow-fullstart/ aboutrow-fullend; }
+
+.aboutsocial__item {
+  display: inline-block; }
 
 .section-portfolio {
   background-color: green;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  grid-row: portfolio-start/portfolio-end;
+  display: grid;
+  grid-template-rows: [aboutrow-fullstart] repeat(1, [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]) [aboutrow-fullend];
+  grid-template-columns: [aboutcol-fullstart] 1fr repeat(4, [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]) 1fr [aboutcol-fullend]; }
+
+.portfolio___img-box {
+  padding: 1.25rem;
+  grid-column: aboutcol-start 3 / aboutcol-end 4;
+  grid-row: aboutrow-fullstart/ aboutrow-fullend; }
+
+.portfolio__shape {
+  height: 15rem;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); }
+
+.portfolio__img {
+  height: 100%; }
+
+.portfolio__text-box {
+  padding: 1.25rem;
+  grid-column: aboutcol-start 1 / aboutcol-end 1;
+  grid-row: aboutrow-fullstart/ aboutrow-fullend; }
+
+.portfoliotext__item {
+  display: inline-block; }
 
 .section-contact {
   background-color: orange;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  grid-row: contact-start/contact-end;
+  display: grid;
+  grid-template-rows: [aboutrow-fullstart] repeat(1, [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]) [aboutrow-fullend];
+  grid-template-columns: [aboutcol-fullstart] 1fr repeat(4, [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]) 1fr [aboutcol-fullend]; }
 
 .navigation {
+  padding: 0.5rem;
   background-color: blue;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  grid-row: nav-start/nav-end;
+  display: grid;
+  grid-template-columns: 1fr [leftcol-start] min-content [leftcol-end] 3fr [rightcol-start] 20rem [rightcol-end] 1fr; }
+  .navigation__logo-box {
+    grid-column: leftcol-start / leftcol-end;
+    background-color: red; }
+  .navigation__list-box {
+    grid-column: rightcol-start / rightcol-end;
+    background-color: green; }
+  .navigation__item {
+    display: inline-block; }
+    .navigation__item:not(:last-child) {
+      margin-right: 0.2rem; }
 
+/*
+
+  &__checkbox {
+  }
+
+  &__button {
+  }
+
+  &__background {
+  }
+
+  &__nav {
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+    }
+
+    &:hover,
+    &:active {
+    }
+  }
+  */
 .header {
   grid-column: full-start / full-end;
+  grid-row: header-start/header-end;
   background-color: red; }
 
 .hpanel {
@@ -227,8 +306,10 @@ body {
   display: grid;
   grid-template-rows: minmax(6rem, min-content) minmax(min-content, 1fr);
   padding: 5rem; }
+  .hpanel__heading {
+    font-size: 0.5rem; }
   .hpanel__projectname {
-    font-size: 2rem; }
+    font-size: 0.5rem; }
   .hpanel__content {
     display: flex;
     flex-direction: row;
@@ -249,5 +330,24 @@ body {
       object-fit: cover; }
 
 .footer {
+  padding: 0.5rem;
   background-color: purple;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  grid-row: footer-start/footer-end;
+  display: grid;
+  grid-template-rows: [footertoprow-start] 80vw [footertoprow-end] [footerbottomrow-start] 80vw [footerbottomrow-end]; }
+  .footer__top {
+    padding: 0.5rem;
+    grid-row: footertoprow-start/footertoprow-end;
+    display: grid;
+    grid-template-columns: 1fr [footerlogo-start] 14rem [footerlogo-end] 1fr; }
+  .footer__bottom {
+    grid-row: footerbottomrow-start/footerbottomrow-end;
+    display: grid;
+    grid-template-columns: 14rem 1fr 14rem; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 0.2rem; }
+  .footer__logo-box {
+    grid-column: footerlogo-start/footer-logoend; }

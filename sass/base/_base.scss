@@ -24,13 +24,13 @@ body {
   /*
       We'll have at least 6 rows 
          Nav
-         Highlights
+         Head
          About Me
          Portfolio
          Contact
          Footer
     */
-  grid-template-rows: 80vw 80vw 40vw 80vw min-content 80vw;
+  grid-template-rows: [nav-start]80vw[nav-end] [header-start] 80vw [header-end] [about-start] 40vw [about-end] [portfolio-start]80vw [portfolio-end] [contact-start]min-content [contact-end] [footer-start]80vw [footer-end];
   grid-template-columns:
     [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [full-end];
