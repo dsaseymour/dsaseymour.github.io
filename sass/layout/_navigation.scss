@@ -4,7 +4,7 @@
   grid-column: full-start / full-end;
   grid-row: nav-start/nav-end;
   display: grid;
-  grid-template-columns: 1fr [leftcol-start]min-content [leftcol-end] 3fr [rightcol-start] 20rem [rightcol-end] 1fr;
+  grid-template-columns: 1fr [leftcol-start]min-content [leftcol-end] 3fr [rightcol-start] 30rem [rightcol-end] 1fr;
 
   &__logo-box {
     grid-column: leftcol-start / leftcol-end;
@@ -13,13 +13,27 @@
 
   &__list-box {
     grid-column: rightcol-start / rightcol-end;
+    display: flex;
+    align-items: center;
     background-color: green;
   }
 
   &__item {
     display: inline-block;
     &:not(:last-child) {
-      margin-right: 0.2rem;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: black;
+    }
+
+    &:hover,
+    &:active {
+      color: blue;
     }
   }
 }
@@ -32,9 +46,7 @@
   &__button {
   }
 
-  &__background {
-  }
-
+ 
   &__nav {
   }
 
@@ -44,13 +56,4 @@
   &__item {
   }
 
-  &__link {
-    &:link,
-    &:visited {
-    }
-
-    &:hover,
-    &:active {
-    }
-  }
   */

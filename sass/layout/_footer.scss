@@ -1,21 +1,44 @@
 .footer {
-  padding: 0.5rem;
+  padding: 2rem 0.5rem;
   background-color: purple;
   grid-column: full-start / full-end;
   grid-row: footer-start/footer-end;
   display: grid;
-  grid-template-rows: [footertoprow-start]80vw[footertoprow-end] [footerbottomrow-start] 80vw [footerbottomrow-end];
+  grid-template-rows: 5vh 5vh 5vh;
 
   &__top {
     padding: 0.5rem;
-    grid-row: footertoprow-start/footertoprow-end;
-    display: grid;
-    grid-template-columns: 1fr [footerlogo-start]14rem [footerlogo-end]1fr;
+    display: flex;
+    justify-content: center;
   }
-  &__bottom {
-    grid-row: footerbottomrow-start/footerbottomrow-end;
+
+  &__center {
     display: grid;
-    grid-template-columns: 14rem 1fr 14rem;
+    grid-template-columns: 3fr [rightcol-start] 30rem [rightcol-end] 0.5fr;
+  }
+
+  &__list-box {
+    grid-column: rightcol-start / rightcol-end;
+    display: flex;
+    align-items: center;
+    background-color: green;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: black;
+    }
+
+    &:hover,
+    &:active {
+      color: blue;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
   }
 
   &__item {
@@ -27,27 +50,5 @@
 
   &__logo-box {
     grid-column: footerlogo-start/footer-logoend;
-  }
-
-  &__logo {
-  }
-
-  &__navigation {
-  }
-
-  &__list {
-  }
-
-  &__link {
-    &:link,
-    &:visited {
-    }
-
-    &:hover,
-    &:active {
-    }
-  }
-
-  &__copyright {
   }
 }
