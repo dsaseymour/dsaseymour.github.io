@@ -28,27 +28,29 @@
   &__content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
+    justify-content: center;
     &-card {
       flex-grow: 0;
     }
   }
-  &__details {
+
+  &__text-box {
     flex-grow: 2;
+    text-align: center;
   }
 
-  &__video {
+  &__video-box {
     background-color: red;
     flex-grow: 1;
-    height: 20%;
-    width: 20%;
+    height: 100%;
+    width: 20vw;
     overflow: hidden;
-    &-content {
-      height: 20%;
-      width: 20%;
-      object-fit: cover;
-    }
+    display: flex;
+    align-items: center;
+  }
+  &__video {
+    width: 100%;
+    object-fit: cover;
   }
 
   //---hpanel content ends-------------------------------------------
