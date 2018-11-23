@@ -1,3 +1,5 @@
 $(document).ready(function() {
-  $(".test").slick({ dots: true });
+  $(".header__hpanel-box").slick({
+    dots: true
+  });
 });
