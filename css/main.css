@@ -16,20 +16,6 @@ so 1rem=10px
 body {
   box-sizing: border-box; }
 
-.grid__container {
-  display: grid;
-  /*
-      We'll have at least 6 rows 
-         Nav
-         Head
-         About Me
-         Portfolio
-         Contact
-         Footer
-    */
-  grid-template-rows: [nav-start] 80vw [nav-end] [header-start] 80vw [header-end] [about-start] 40vw [about-end] [portfolio-start] 80vw [portfolio-end] [contact-start] min-content [contact-end] [footer-start] 80vw [footer-end];
-  grid-template-columns: [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [full-end]; }
-
 .u-center-text {
   text-align: center; }
 
@@ -171,6 +157,20 @@ body {
       text-decoration: none;
       cursor: pointer; }
 
+.grid__container {
+  display: grid;
+  /*
+      We'll have at least 6 rows 
+         Nav
+         Head
+         About Me
+         Portfolio
+         Contact
+         Footer
+    */
+  grid-template-rows: [nav-start] 80vw [nav-end] [header-start] 80vw [header-end] [about-start] 40vw [about-end] [portfolio-start] 80vw [portfolio-end] [contact-start] min-content [contact-end] [footer-start] 80vw [footer-end];
+  grid-template-columns: [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [full-end]; }
+
 .section-about {
   background-color: pink;
   grid-column: full-start / full-end;
@@ -238,6 +238,16 @@ body {
   grid-template-rows: [aboutrow-fullstart] repeat(1, [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]) [aboutrow-fullend];
   grid-template-columns: [aboutcol-fullstart] 1fr repeat(4, [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]) 1fr [aboutcol-fullend]; }
 
+.portfolio-grid__container {
+  display: grid;
+  /*
+      We'll have at least  rows 
+
+
+
+
+      */ }
+
 .navigation {
   padding: 0.5rem;
   background-color: blue;
@@ -294,30 +304,24 @@ body {
   background-color: yellow;
   display: grid;
   grid-template-rows: minmax(6rem, min-content) minmax(min-content, 1fr);
-  padding: 5rem; }
+  padding: 1.3rem; }
   .hpanel__heading {
-    font-size: 0.5rem; }
+    font-size: 1rem; }
   .hpanel__projectname {
-    font-size: 0.5rem; }
+    font-size: 1.5rem; }
   .hpanel__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .hpanel__content-card {
-      flex-grow: 0; }
+    display: grid;
+    grid-template-columns: 30vw 1fr; }
   .hpanel__text-box {
-    flex-grow: 2;
-    text-align: center; }
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
   .hpanel__video-box {
     background-color: red;
-    flex-grow: 1;
-    height: 100%;
-    width: 20vw;
-    overflow: hidden;
-    display: flex;
-    align-items: center; }
+    overflow: hidden; }
   .hpanel__video {
-    width: 100%;
+    object-fit: cover;
+    max-height: 40vh;
     object-fit: cover; }
 
 .footer {

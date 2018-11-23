@@ -1,7 +1,6 @@
 .header {
   grid-column: full-start / full-end;
   grid-row: header-start/header-end;
-
   background-color: red;
 }
 
@@ -14,42 +13,35 @@
   background-color: yellow;
   display: grid;
   grid-template-rows: minmax(6rem, min-content) minmax(min-content, 1fr);
-  padding: 5rem;
+  padding: 1.3rem;
   //---hpanel first row begins-------------------------------------------
   &__heading {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 
   &__projectname {
-    font-size: 0.5rem;
+    font-size: 1.5rem;
   }
   //---hpanel first row ends-------------------------------------------
   //---hpanel content begins-------------------------------------------
   &__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    &-card {
-      flex-grow: 0;
-    }
+    display: grid;
+    grid-template-columns: 30vw 1fr;
   }
 
   &__text-box {
-    flex-grow: 2;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   &__video-box {
     background-color: red;
-    flex-grow: 1;
-    height: 100%;
-    width: 20vw;
     overflow: hidden;
-    display: flex;
-    align-items: center;
   }
   &__video {
-    width: 100%;
+    object-fit: cover;
+    max-height: 40vh;
     object-fit: cover;
   }
 
