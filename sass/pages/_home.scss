@@ -74,39 +74,22 @@
   display: grid;
   grid-template-rows:
     [aboutrow-fullstart] repeat(
-      1,
+      2,
       [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]
     )
     [aboutrow-fullend];
-  grid-template-columns:
-    [aboutcol-fullstart] 1fr repeat(
-      4,
-      [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]
-    )
-    1fr
-    [aboutcol-fullend];
 }
 
-.portfolio___img-box {
+.portfolio___link-box {
   padding: 1.25rem;
-  grid-column: aboutcol-start 3 / aboutcol-end 4;
-  grid-row: aboutrow-fullstart/ aboutrow-fullend;
-}
-
-.portfolio__shape {
-  height: 15rem;
-  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-}
-
-.portfolio__img {
-  height: 100%;
+  grid-row: aboutrow-start 1 / aboutrow-end 1;
+  display: flex;
+  justify-content: center;
 }
 
 .portfolio__text-box {
   padding: 1.25rem;
-  grid-column: aboutcol-start 1 / aboutcol-end 1;
-  grid-row: aboutrow-fullstart/ aboutrow-fullend;
+  grid-row: aboutrow-start 2 / aboutrow-end 2;
 }
 
 .portfoliotext__item {
