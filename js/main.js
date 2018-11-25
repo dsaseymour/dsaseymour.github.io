@@ -1,11 +1,10 @@
 $(document).ready(function() {
-  /*
-  $(".header__hpanel-box").slick({
-    dots: true
-  });
+  /***
+   * header__hpanel-box
+   * portfolio__testimonials-box
+   *  
 
-  $(".portfolio__testimonials-box").slick({
-    dots: true
-  });
-  */
+   */
+
+  $(".hpanel").hide();
 });

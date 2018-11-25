@@ -55,14 +55,25 @@
 
 .about__text-box {
   padding: 1.25rem;
+  font-size: 2rem;
   grid-column: aboutcol-start 3 / aboutcol-end 4;
   grid-row: aboutrow-fullstart/ aboutrow-fullend;
 }
 .about__socialrow {
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .aboutsocial__item {
   display: inline-block;
+}
+
+.aboutsocial__link {
+  margin-right: 2rem;
+  color: blue;
+  & i {
+    font-size: 2.5rem;
+  }
 }
 
 // ABOUT SECTION ENDS-----------------------------------
@@ -72,30 +83,31 @@
   grid-column: full-start / full-end;
   grid-row: portfolio-start/portfolio-end;
   display: grid;
-  grid-template-rows:
-    [aboutrow-fullstart] repeat(
-      2,
-      [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]
-    )
-    [aboutrow-fullend];
+  grid-template-rows: minmax(min-content, 14rem) min-content;
+}
+.portfolio__text-box {
+  padding: 1.25rem;
+}
+
+.portfolio_linkrow,
+li {
+  display: inline-block;
+}
+
+.portfoliolinkbox__item {
+  margin-right: 4rem;
 }
 
 .portfolio___link-box {
   padding: 1.25rem;
-  grid-row: aboutrow-start 1 / aboutrow-end 1;
   display: flex;
   justify-content: center;
 }
 
-.portfolio__text-box {
-  padding: 1.25rem;
-  grid-row: aboutrow-start 2 / aboutrow-end 2;
-}
-
 .portfoliotext__item {
   display: inline-block;
+  margin-right: 20rem;
 }
-
 // PORTFOLIO SECTION END-------------------------
 // CONTACT SECTION END-------------------------
 .section-contact {
