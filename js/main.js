@@ -5,6 +5,5 @@ $(document).ready(function() {
    *  
 
    */
-
-  $(".hpanel").hide();
+  //  $(".hpanel").hide();
 });

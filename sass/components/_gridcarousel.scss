@@ -1,0 +1,35 @@
+//-------------------
+$base: #172a3a;
+$number-of-slides: 4;
+
+@mixin order($slides) {
+  @for $i from 1 through $slides {
+    &:nth-of-type(#{$i}) {
+      order: #{$i};
+    }
+  }
+}
+
+.grid-carousel {
+  min-height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-auto-flow: column;
+
+  &__slide {
+    @include bg-clr($base, $number-of-slides);
+    @include order($number-of-slides);
+    display: grid;
+  }
+}
+
+.left,
+.right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  right: 0;
+}
