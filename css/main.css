@@ -54,6 +54,9 @@ h1 {
 h2 {
   font-size: 2rem; }
 
+.hpanel__heading {
+  color: black !important; }
+
 .hpanel__projectname {
   font-size: 1.2rem; }
 
@@ -109,7 +112,7 @@ h2 {
 
 .btn--basic {
   background-color: #28b485;
-  color: #fff; }
+  color: blue; }
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
@@ -122,7 +125,7 @@ h2 {
 
 .btn-text:hover {
   background-color: #7ed56f;
-  color: #fff;
+  color: blue;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
 
 .btn-text:active {
@@ -140,7 +143,7 @@ h2 {
     color: inherit;
     padding: 1.5rem 2rem;
     border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 255, 0.5);
     border: none;
     border-bottom: 3px solid transparent;
     width: 80%; }
@@ -166,7 +169,7 @@ h2 {
   font-size: 2.8rem;
   font-weight: 300;
   text-align: center;
-  color: #fff; }
+  color: blue; }
 
 .list {
   list-style: none;

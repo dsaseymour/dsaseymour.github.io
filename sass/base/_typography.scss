@@ -26,6 +26,7 @@ h2 {
 }
 
 .hpanel__heading {
+  color: black !important; //something is overriding my css settings with a white colour and I have tried really hard to identify it and can't I can't locate it in any of my scss which is why important is necessary
 }
 
 .hpanel__projectname {
