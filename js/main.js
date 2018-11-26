@@ -14,6 +14,6 @@ $(document).ready(function() {
 
   $(".portfolio__testimonials-box").slick({
     autoplay: true,
-    autoplaySpeed: 1500
+    autoplaySpeed: 1900
   });
 });
