@@ -1,7 +1,7 @@
 .header {
   grid-column: full-start / full-end;
   grid-row: header-start/header-end;
-  background-color: red;
+  //  background-color: red;
 }
 
 .hpanel {
@@ -10,7 +10,7 @@
   hpanel is divided into two rows 
   one for heading the other for content
   */
-  background-color: yellow;
+  // background-color: yellow;
   display: grid;
   grid-template-rows: minmax(6rem, min-content) minmax(min-content, 1fr);
   padding: 1.3rem;
@@ -20,23 +20,27 @@
   //---hpanel content begins-------------------------------------------
   &__content {
     display: grid;
-    grid-template-columns: 30vw 1fr;
-  }
-
-  &__text-box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    grid-template-columns: 30vw 30vw;
+    grid-gap: 5rem;
+    grid-template-rows: [row-start] 100% [row-end];
   }
 
   &__video-box {
-    background-color: red;
+    grid-row: row-start/row-end;
+    //  background-color: red;
     overflow: hidden;
   }
   &__video {
     object-fit: cover;
     max-height: 40vh;
-    object-fit: cover;
+  }
+
+  &__text-box {
+    padding: 2rem;
+    grid-row: row-start/row-end;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   //---hpanel content ends-------------------------------------------

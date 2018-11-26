@@ -1,6 +1,6 @@
 .footer {
   padding: 2rem 0.5rem;
-  background-color: purple;
+  //  background-color: purple;
   grid-column: full-start / full-end;
   grid-row: footer-start/footer-end;
   display: grid;
@@ -21,7 +21,7 @@
     grid-column: rightcol-start / rightcol-end;
     display: flex;
     align-items: center;
-    background-color: green;
+    //  background-color: green;
   }
 
   &__link {

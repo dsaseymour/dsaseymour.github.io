@@ -1,6 +1,6 @@
 .navigation {
   padding: 0.5rem;
-  background-color: blue;
+  //  background-color: blue;
   grid-column: full-start / full-end;
   grid-row: nav-start/nav-end;
   display: grid;
@@ -8,14 +8,14 @@
 
   &__logo-box {
     grid-column: leftcol-start / leftcol-end;
-    background-color: red;
+    //    background-color: red;
   }
 
   &__list-box {
     grid-column: rightcol-start / rightcol-end;
     display: flex;
     align-items: center;
-    background-color: green;
+    //   background-color: green;
   }
 
   &__item {

@@ -17,7 +17,7 @@
 
 //ABOUT SECTION BEGINS----------------------------------
 .section-about {
-  background-color: pink;
+  // background-color: pink;
   grid-column: full-start / full-end;
   grid-row: about-start/about-end;
   display: grid;
@@ -79,7 +79,7 @@
 // ABOUT SECTION ENDS-----------------------------------
 // PORTFOLIO SECTION BEGINS-------------------------
 .section-portfolio {
-  background-color: green;
+  //  background-color: green;
   grid-column: full-start / full-end;
   grid-row: portfolio-start/portfolio-end;
   display: grid;
@@ -111,7 +111,7 @@ li {
 // PORTFOLIO SECTION END-------------------------
 // CONTACT SECTION END-------------------------
 .section-contact {
-  background-color: orange;
+  //  background-color: orange;
   grid-column: full-start / full-end;
   grid-row: contact-start/contact-end;
   display: grid;
