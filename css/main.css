@@ -321,7 +321,7 @@ li {
           Content     10
           Footer //this will probably just contain a back to the top button
       */
-  grid-template-rows: [nav-start] 80vw [nav-end] [contentrows-start] repeat(8, [row-start] minmax(min-content, 6vh) [row-end]) [contentrows-end] [footer-start] 80vw [footer-end];
+  grid-template-rows: [nav-start] 80vw [nav-end contentrows-start] repeat(8, [row-start] minmax(min-content, 6vh) [row-end]) [contentrows-end footer-start] 80vw [footer-end];
   grid-template-columns: 1fr [full-start] repeat(3, [col-start] minmax(min-content, 14rem) [col-end]) [full-end] 1fr; }
 
 .profilecontent-box {
@@ -376,11 +376,12 @@ li {
   background-color: transparent; }
   .hpanel__content {
     display: grid;
-    grid-template-columns: 30vw 30vw;
+    grid-template-columns: 1fr [videobox-start] 30vw [videobox-end textbox-start] 30vw [textbox-end] 1fr;
     grid-gap: 5rem;
     grid-template-rows: [row-start] 100% [row-end]; }
   .hpanel__video-box {
     grid-row: row-start/row-end;
+    grid-column: videobox-start/videobox-end;
     overflow: hidden; }
   .hpanel__video {
     object-fit: cover;
@@ -388,6 +389,7 @@ li {
   .hpanel__text-box {
     padding: 0.3rem;
     grid-row: row-start/row-end;
+    grid-column: textbox-start/textbox-end;
     display: flex;
     align-items: center;
     flex-direction: column; }

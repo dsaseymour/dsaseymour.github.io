@@ -21,13 +21,14 @@
   //---hpanel content begins-------------------------------------------
   &__content {
     display: grid;
-    grid-template-columns: 30vw 30vw;
+    grid-template-columns: 1fr [videobox-start]30vw[videobox-end textbox-start] 30vw [textbox-end] 1fr;
     grid-gap: 5rem;
     grid-template-rows: [row-start] 100% [row-end];
   }
 
   &__video-box {
     grid-row: row-start/row-end;
+    grid-column: videobox-start/videobox-end;
     //  background-color: red;
     overflow: hidden;
   }
@@ -39,6 +40,7 @@
   &__text-box {
     padding: 0.3rem;
     grid-row: row-start/row-end;
+    grid-column: textbox-start/textbox-end;
     display: flex;
     align-items: center;
     flex-direction: column;
