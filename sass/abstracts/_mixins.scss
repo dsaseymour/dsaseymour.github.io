@@ -1,8 +1,8 @@
-@mixin clearfix{
-    //append a pseudo element after the element that will clear the floats
-        &::after{
-            content: "";
-            display: table;
-            clear:both;
-        }
-    }
+@mixin clearfix {
+  //append a pseudo element after the element that will clear the floats
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
