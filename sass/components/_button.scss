@@ -6,7 +6,7 @@
     text-decoration: none;
     padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 10rem;
+    border-radius: 0.5rem;
     position: relative;
     font-size: $default-font-size;
     border: none;
@@ -15,18 +15,13 @@
 
   &:active,
   &:focus {
-    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
 
-  &--green {
-    background-color: white;
-    color: black;
-
-    &::after {
-      background-color: blue;
-    }
+  &--basic {
+    background-color: $color-primary-dark;
+    color: $color-primary-light;
   }
 }
 
