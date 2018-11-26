@@ -36,6 +36,14 @@
     )
     1fr
     [aboutcol-fullend];
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-secondary-dark, 0.8),
+      rgba($color-tertiary-dark, 0.8)
+    ),
+    url(../img/backimg5.jpg);
+  background-size: cover;
 }
 
 .about___img-box {
@@ -55,7 +63,7 @@
 
 .about__text-box {
   padding: 1.25rem;
-  font-size: 2rem;
+  font-size: 1.3rem;
   grid-column: aboutcol-start 3 / aboutcol-end 4;
   grid-row: aboutrow-fullstart/ aboutrow-fullend;
 }
@@ -70,9 +78,28 @@
 
 .aboutsocial__link {
   margin-right: 2rem;
-  color: blue;
   & i {
     font-size: 2.5rem;
+  }
+
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-secondary-light;
+    display: inline-block;
+    text-decoration: none;
+    padding: 3px;
+  }
+
+  &:hover {
+    color: white;
+    background-color: $color-secondary-light;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+  }
+
+  &:active {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
   }
 }
 
@@ -87,6 +114,7 @@
 }
 .portfolio__text-box {
   padding: 1.25rem;
+  z-index: 5;
 }
 
 .portfolio_linkrow,
@@ -102,6 +130,7 @@ li {
   padding: 1.25rem;
   display: flex;
   justify-content: center;
+  z-index: 5;
 }
 
 .portfoliotext__item {

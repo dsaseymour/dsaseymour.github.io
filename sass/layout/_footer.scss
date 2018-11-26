@@ -24,30 +24,6 @@
     //  background-color: green;
   }
 
-  &__link {
-    &:link,
-    &:visited {
-      color: black;
-    }
-
-    &:hover,
-    &:active {
-      color: blue;
-    }
-  }
-
-  &__bottom {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__item {
-    display: inline-block;
-    &:not(:last-child) {
-      margin-right: 0.2rem;
-    }
-  }
-
   &__logo-box {
     grid-column: footerlogo-start/footer-logoend;
   }

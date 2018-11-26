@@ -29,7 +29,9 @@
     padding: 2rem;
     width: 25vw;
     height: 35vh;
-    background-color: red;
+    background-color: $color-secondary-dark;
+    color: $color-secondary-light;
+    border-radius: 2rem;
     margin-bottom: 1rem;
     &:not(:last-child) {
       margin-right: 1rem;

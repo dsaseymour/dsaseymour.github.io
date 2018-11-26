@@ -25,35 +25,5 @@
     }
   }
 
-  &__link {
-    &:link,
-    &:visited {
-      color: black;
-    }
-
-    &:hover,
-    &:active {
-      color: blue;
-    }
-  }
+  background-color: transparent !important;
 }
-
-/*
-
-  &__checkbox {
-  }
-
-  &__button {
-  }
-
- 
-  &__nav {
-  }
-
-  &__list {
-  }
-
-  &__item {
-  }
-
-  */

@@ -1,7 +1,7 @@
 body {
   font-family: "Fjalla One", sans-serif;
   line-height: 1.3;
-  color: $color-primary;
+  color: $color-secondary-light;
 }
 
 .heading-primary {
@@ -29,7 +29,7 @@ h2 {
 }
 
 .hpanel__heading {
-  color: black;
+  color: $color-secondary-light;
   font-weight: 300;
   text-align: center;
 }
