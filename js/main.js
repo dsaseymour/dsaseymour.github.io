@@ -6,4 +6,16 @@ $(document).ready(function() {
 
    */
   //  $(".hpanel").hide();
+
+  $(".header__hpanel-box").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    infinite: false
+  });
+
+  $(".portfolio__testimonials-box").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    infinite: false
+  });
 });

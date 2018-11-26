@@ -3,6 +3,10 @@
   grid-row: header-start/header-end;
   //  background-color: red;
   background-color: transparent;
+
+  &__hpanel-box {
+    overflow: hidden;
+  }
 }
 
 .hpanel {
@@ -15,28 +19,29 @@
   display: grid;
   grid-template-rows: minmax(6rem, min-content) minmax(min-content, 1fr);
   padding: 1.3rem;
+
   //---hpanel first row begins-------------------------------------------
 
   //---hpanel first row ends-------------------------------------------
   //---hpanel content begins-------------------------------------------
   &__content {
     display: grid;
-    grid-template-columns: 1fr [videobox-start]30vw[videobox-end textbox-start] 30vw [textbox-end] 1fr;
+    grid-template-columns: minmax(0, 1fr) [videobox-start]30vw[videobox-end textbox-start] 30vw [textbox-end] minmax(
+        0,
+        1fr
+      );
     grid-gap: 5rem;
     grid-template-rows: [row-start] 100% [row-end];
   }
-
   &__video-box {
     grid-row: row-start/row-end;
-    grid-column: videobox-start/videobox-end;
-    //  background-color: red;
+    grid-column: videobox-start/videobox-end; // background-color: red;
     overflow: hidden;
   }
   &__video {
     object-fit: cover;
     max-height: 40vh;
   }
-
   &__text-box {
     padding: 0.3rem;
     grid-row: row-start/row-end;
@@ -45,18 +50,14 @@
     align-items: center;
     flex-direction: column;
   }
-
   background-color: transparent;
-  //---hpanel content ends-------------------------------------------
+  // ---hpanel content ends-------------------------------------------
 }
-
 .hpanel {
   &__heading {
   }
-
   &__projectname {
   }
-
   &__content {
   }
 

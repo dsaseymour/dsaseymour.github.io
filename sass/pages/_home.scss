@@ -30,11 +30,11 @@
     )
     [aboutrow-fullend];
   grid-template-columns:
-    [aboutcol-fullstart] 1fr repeat(
+    [aboutcol-fullstart] minmax(0, 1fr) repeat(
       4,
       [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]
     )
-    1fr
+    minmax(0, 1fr)
     [aboutcol-fullend];
 
   background-image: linear-gradient(
@@ -111,6 +111,8 @@
   grid-row: portfolio-start/portfolio-end;
   display: grid;
   grid-template-rows: minmax(min-content, 14rem) min-content;
+  grid-template-columns: minmax(0, 1fr);
+  overflow: hidden;
 }
 .portfolio__text-box {
   padding: 1.25rem;
@@ -151,11 +153,11 @@ li {
     )
     [aboutrow-fullend];
   grid-template-columns:
-    [aboutcol-fullstart] 1fr repeat(
+    [aboutcol-fullstart] minmax(0, 1fr) repeat(
       4,
       [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]
     )
-    1fr
+    minmax(0, 1fr)
     [aboutcol-fullend];
 }
 // CONTACT SECTION END-------------------------
