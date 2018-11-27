@@ -31,9 +31,9 @@
         1fr
       );
     grid-gap: 5rem;
-    grid-template-rows: [row-start] 100% [row-end];
+    grid-template-rows: [row-start] 57vh [row-end];
   }
-  &__video-box {
+  &__media-box {
     grid-row: row-start/row-end;
     grid-column: videobox-start/videobox-end; // background-color: red;
     overflow: hidden;
@@ -41,6 +41,9 @@
   &__video {
     object-fit: cover;
     max-height: 40vh;
+  }
+  &__img {
+    height: 100%;
   }
   &__text-box {
     padding: 0.3rem;
@@ -60,13 +63,10 @@
   }
   &__content {
   }
-
   &__content-card {
   }
-
   &__video-content {
   }
-
   &__details {
   }
 }

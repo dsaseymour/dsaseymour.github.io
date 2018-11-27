@@ -9,7 +9,7 @@
          Contact
          Footer
     */
-  grid-template-rows: [nav-start]80vw[nav-end header-start] 80vw [header-end about-start] 40vw [about-end portfolio-start]80vw [portfolio-end contact-start]min-content [contact-end footer-start]80vw [footer-end];
+  grid-template-rows: [nav-start]80vw[nav-end header-start] 80vw [header-end about-start] 30vw [about-end portfolio-start]80vw [portfolio-end contact-start]min-content [contact-end footer-start]80vw [footer-end];
   grid-template-columns:
     [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [full-end];
@@ -42,7 +42,7 @@
       rgba($color-secondary-dark, 0.8),
       rgba($color-tertiary-dark, 0.8)
     ),
-    url(../img/backimg5.jpg);
+    url(../img/backimg7.jpg);
   background-size: cover;
 }
 
@@ -53,12 +53,15 @@
 }
 .about__shape {
   height: 15rem;
+  /*  
   -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);*/
 }
 
 .about__img {
   height: 100%;
+  border-radius: 100px;
+  border: 2px solid $color-secondary-light;
 }
 
 .about__text-box {
@@ -159,5 +162,9 @@ li {
     )
     minmax(0, 1fr)
     [aboutcol-fullend];
+
+  background-image: linear-gradient(to left, rgba(white, 0.3), rgba(white, 0.5)),
+    url(../img/backimg8.jpg);
+  background-size: cover;
 }
 // CONTACT SECTION END-------------------------
