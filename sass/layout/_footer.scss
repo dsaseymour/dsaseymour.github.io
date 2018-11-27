@@ -4,15 +4,19 @@
   grid-column: full-start / full-end;
   grid-row: footer-start/footer-end;
   display: grid;
-  grid-template-rows: 5vh 5vh 5vh;
+  grid-template-rows: [ftoprow-start]5vh [ftoprow-end fcenterrow-start] 5vh [fcenterrow-end fbottomrow-start] 5vh [fbottomrow-end];
 
   &__top {
+    grid-row: ftoprow-start/ftoprow-end;
     padding: 0.5rem;
     display: flex;
     justify-content: center;
   }
 
   &__center {
+    padding: 2rem;
+
+    grid-row: fcenterrow-start/fcenterrow-end;
     display: grid;
     grid-template-columns: minmax(0, 3fr) [rightcol-start] 30rem [rightcol-end] minmax(
         0,
@@ -29,7 +33,9 @@
     // grid-column: footerlogo-start/footerlogo-end;
   }
   &__bottom {
+    grid-row: fbottomrow-start/fbottomrow-end;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
