@@ -300,13 +300,12 @@ li {
   display: inline-block; }
 
 .portfoliolinkbox__item {
-  margin-right: 4rem; }
+  margin-right: 1rem; }
 
 .portfolio___link-box {
   padding: 1.25rem;
   display: flex;
-  justify-content: center;
-  z-index: 5; }
+  justify-content: center; }
 
 .portfoliotext__item {
   display: inline-block;
