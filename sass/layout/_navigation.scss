@@ -8,6 +8,9 @@
 
   &__logo-box {
     grid-column: leftcol-start / leftcol-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     //    background-color: red;
   }
 
@@ -42,4 +45,8 @@
   font-family: "Lora", sans-serif;
   font-size: 1rem;
   font-weight: bold;
+}
+
+#navimg {
+  max-width: 3rem;
 }

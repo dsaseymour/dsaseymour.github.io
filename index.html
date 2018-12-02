@@ -29,10 +29,10 @@
     <!-- NAVBAR START -->
     <div class="navigation">
         <div class="navigation__logo-box">
-            <a href="#">
+            <a href="./index.html">
                     <picture class="navigation__logo">
                             <source srcset="img/logo.png" media="(max-width: 37.5em)">
-                            <img srcset="img/logo.png" alt="Full logo" src="img/logo.png">
+                            <img id="navimg" srcset="img/logo.png" alt="Full logo" src="img/logo.png">
                         </picture>            
             </a>
         </div>
@@ -46,16 +46,16 @@
         <div class="navigation__list-box">
                 <ul class="navigation__list list">
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link btn-text">Home</a>
+                            <a href="./index.html" class="navigation__link btn-text">Home</a>
                         </li>
                         <li class="navigation__item">
                             <a href="./portfolio.html" class="navigation__link btn-text">Portfolio</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="#" class="navigation__link btn-text">About</a>
+                            <a href="#aboutsection" class="navigation__link btn-text">About</a>
                         </li>
                         <li class="navigation__item btn-text">
-                            <a href="#" class="navigation__link btn-text">Contact</a>
+                            <a href="#contactsection" class="navigation__link btn-text">Contact</a>
                         </li>
                         <li class="navigation__item">
                             <a href="./public/dannyseymour_resume.pdf" download="Danny Seymour Resume" class="navigation__link btn-text">Resume</a>
@@ -108,6 +108,7 @@
     </header>
     <section class="section-about">
         <!-- ABOUT START -->
+        <a name="aboutsection"></a> 
         <div class="about___img-box">
                 <figure class="about__shape">
                 <img class="about__img" src="./img/dannyl.jpg"
@@ -195,6 +196,7 @@
         <!-- PORTFOLIO END -->
     </section>
     <section class="section-contact">
+            <a name="contactsection"></a> 
         <div class="form contact__form">
             <form name="input" method="POST" action="https://formspree.io/danny.saseymour@gmail.com" class="form">
                 <div class="u-margin-bottom-medium">
@@ -228,10 +230,10 @@
     <footer class="footer">
         <div class="footer__top">
                 <div class="footer__logo-box">
-                        <a href="#">
+                        <a href="./index.html">
                         <picture class="footer__logo">
                             <source srcset="img/logo.png" media="(max-width: 37.5em)">
-                            <img srcset="img/logo.png" alt="Full logo" src="img/logo.png">
+                            <img id="navimg" srcset="img/logo.png" alt="Full logo" src="img/logo.png">
                         </picture>
                         </a>
                     </div>
@@ -239,11 +241,11 @@
         <div class="footer__center ">
                 <div class="footer__list-box u-margin-bottom-small">
                         <ul class="footer__list list">
-                            <li class="footer__item"><a href="#" class="footer__link btn-text">Home</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link btn-text">Portfolio</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link btn-text">About</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link btn-text">Contact</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link btn-text">Resume</a></li>
+                            <li class="footer__item"><a href="./index.html" class="footer__link btn-text">Home</a></li>
+                            <li class="footer__item"><a href="./portfolio.html" class="footer__link btn-text">Portfolio</a></li>
+                            <li class="footer__item"><a href="#aboutsection" class="footer__link btn-text">About</a></li>
+                            <li class="footer__item"><a href="#contactsection" class="footer__link btn-text">Contact</a></li>
+                            <li class="footer__item"><a href="./public/dannyseymour_resume.pdf" class="footer__link btn-text">Resume</a></li>
                         </ul>
                     </div>            
         </div>

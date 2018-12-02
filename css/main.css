@@ -359,7 +359,10 @@ li {
   grid-template-columns: 0.3fr [leftcol-start] min-content [leftcol-end] 1fr [middlecol-start] 20rem [middlecol-end] 1fr [rightcol-start] 30rem [rightcol-end] 0.3fr;
   background-color: transparent !important; }
   .navigation__logo-box {
-    grid-column: leftcol-start / leftcol-end; }
+    grid-column: leftcol-start / leftcol-end;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .navigation__centercontent-box {
     grid-column: middlecol-start / middlecol-end;
     display: flex;
@@ -381,6 +384,9 @@ li {
   font-family: "Lora", sans-serif;
   font-size: 1rem;
   font-weight: bold; }
+
+#navimg {
+  max-width: 3rem; }
 
 .header {
   grid-column: full-start / full-end;
@@ -445,6 +451,9 @@ li {
     display: flex;
     justify-content: center;
     text-align: center; }
+
+#footerimg {
+  max-width: 3rem; }
 
 .portfolionavigation {
   display: flex;
