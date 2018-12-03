@@ -14,12 +14,13 @@
     )
     [contentrows-end footer-start]80vw [footer-end];
   grid-template-columns:
-    1fr [full-start] repeat(3, [col-start] minmax(min-content, 14rem) [col-end])
-    [full-end] 1fr;
+    [full-start] repeat(3, [col-start] minmax(min-content, 14rem) [col-end])
+    [full-end];
 }
-.profilecontent-box {
+.portfoliocontent-box {
   display: grid;
   grid-column: full-start/full-end;
+  grid-row: contentrows-start/contentrows-end;
 }
 .contentrow {
   display: flex;
@@ -27,8 +28,11 @@
 
   &__card {
     padding: 2rem;
-    width: 25vw;
-    height: 35vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: $color-secondary-dark;
     color: $color-secondary-light;
     border-radius: 2rem;
@@ -36,5 +40,25 @@
     &:not(:last-child) {
       margin-right: 1rem;
     }
+  }
+}
+
+.contentrowcard {
+  &__heading {
+  }
+
+  &__projectname {
+  }
+
+  &__projectechlist {
+  }
+
+  &__content {
+  }
+
+  &__linklist {
+  }
+
+  &__text-box {
   }
 }

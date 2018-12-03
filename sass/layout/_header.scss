@@ -53,20 +53,14 @@
     align-items: center;
     flex-direction: column;
   }
+  &__projecttechlist {
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
   background-color: transparent;
   // ---hpanel content ends-------------------------------------------
 }
-.hpanel {
-  &__heading {
-  }
-  &__projectname {
-  }
-  &__content {
-  }
-  &__content-card {
-  }
-  &__video-content {
-  }
-  &__details {
-  }
+.hpanelbtn i {
+  margin-right: 0.5rem;
 }

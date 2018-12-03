@@ -1,6 +1,15 @@
 .portfoliofooter {
-  display: flex;
-  flex-direction: row-reverse;
-  &__content {
+  padding: 0.5rem;
+  grid-column: full-start/full-end;
+  grid-row: footer-start/footer-end;
+  display: grid;
+  grid-template-columns: [historybackcol-start] 40rem [historybackcol-end] 2fr [backtotopcol-start] 40rem [backtotopcol-end];
+
+  &__historybackcontent {
+    grid-column: historybackcol-start/historybackcol-end;
+  }
+
+  &___backtoptopcontent {
+    grid-column: backtotopcol-start/backtotopcol-end;
   }
 }

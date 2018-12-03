@@ -4,7 +4,7 @@
   grid-column: full-start / full-end;
   grid-row: nav-start/nav-end;
   display: grid;
-  grid-template-columns: 0.3fr [leftcol-start]min-content [leftcol-end] 1fr [middlecol-start] 20rem [middlecol-end] 1fr [rightcol-start] 30rem [rightcol-end] 0.3fr;
+  grid-template-columns: 0.3fr [leftcol-start]min-content [leftcol-end] 1fr [middlecol-start] 20rem [middlecol-end] 1fr [rightcol-start] 50rem [rightcol-end] 0.3fr;
 
   &__logo-box {
     grid-column: leftcol-start / leftcol-end;

@@ -17,6 +17,15 @@
     <meta http-equiv="Content-Language" content="en" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="manifest" href="site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fjalla+One"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora"
+      rel="stylesheet"
+    />
+
     <!--
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
            crossorigin="anonymous" />
@@ -49,16 +58,72 @@
       //BODY BEGINS
       //================================================  */
     -->
+    <!-- NAVBAR START -->
 
     <div class="portfolionavigation">
-      <a class="btn btn--basic" href="./index.html"
-        >Back to HomePage<i class="far fa-hand-point-left"></i
-      ></a>
-      <h1>PROJECTS</h1>
+      <div class="portfolionavigation__logo-box">
+        <a href="./index.html">
+          <picture class="navigation__logo">
+            <source srcset="img/logo.png" media="(max-width: 37.5em)" />
+            <img
+              id="portfolionavimg"
+              srcset="img/logo.png"
+              alt="Full logo"
+              src="img/logo.png"
+            />
+          </picture>
+        </a>
+      </div>
+
+      <div class="portfolionavigation__centercontent-box">
+        <span id="navigation__centercontent-heading"> DANNY SEYMOUR</span>
+      </div>
+      <div class="portfolionavigation__list-box">
+        <ul class="navigation__list list">
+          <li class="portfolionavigation__item">
+            <a href="./index.html" class="navigation__link btn-text"
+              >Home <i class="fas fa-greater-than"></i>
+              <i class="fas fa-greater-than"></i
+            ></a>
+          </li>
+          <li class="portfolionavigation__item">
+            <a href="./portfolio.html" class="navigation__link btn-text"
+              >Portfolio</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="profilecontent-box">
+
+    <!-- NAVBAR END -->
+    <div class="portfoliocontent-box">
       <div class="contentrow contentrow--1">
-        <div class="contentrow__card"><h1>Project Name</h1></div>
+        <div class="contentrow__card">
+          <div class="contentrowcard__heading">
+            <p class="cardheading-primary">How do developers connect?</p>
+            <span class="contentrowcard__projectname cardheading-secondary">
+              <p>
+                Dev Connector
+                <span class="contentrowcard__projecttechlist"
+                  ><i class="fab fa-react"></i> <i class="fab fa-node"></i>
+                  <i class="fab fa-css3-alt"></i
+                ></span>
+              </p>
+            </span>
+          </div>
+          <div class="contentrowcard__content"></div>
+          <div class="contentrowcard__linklist">
+            <a class="crcbtn btn--basic" href="./pptemplate.html">
+              <i class="fas fa-briefcase"></i>View Project Page</a
+            >
+          </div>
+          <div class="contentrowcard__text-box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+            commodi voluptate, sunt officia illum nisi eligendi consequuntur
+            maiores modi illo iste neque cum ad ipsam odio accusantium quod
+            minima! Odio.
+          </div>
+        </div>
         <div class="contentrow__card">This is a project card</div>
         <div class="contentrow__card">This is a project card</div>
       </div>
@@ -112,13 +177,17 @@
     </div>
 
     <footer class="portfoliofooter">
-      <div class="portfoliofooter__content">
+      <div class="porfoliofooter___historybackcontent">
+        <a class="btn btn--basic" href="./index.html"
+          >Back Home <i class="far fa-hand-point-left"></i
+        ></a>
+      </div>
+      <div class="porfoliofooter___backtoptopcontent">
         <a class="btn btn--basic" href="#"
-          >Back to The Top <i class="far fa-hand-point-up"></i
+          >Back to The Top<i class="far fa-hand-point-up"></i
         ></a>
       </div>
     </footer>
-
     <!--
       //================================================
       //BODY ENDS
