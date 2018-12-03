@@ -8,8 +8,10 @@
   },
   "scripts": {
     "compile:sass": "node-sass -w sass/main.scss  css/main.css",
+    "compile:pug": "pug -w pug --out .",
     "devserver": "live-server",
-    "dev": "concurrently \"npm run compile:sass\" \"npm run devserver\""
+    "dev": "concurrently \"npm run compile:sass\" \"npm run devserver\"",
+    "devp": "concurrently \"npm run compile:sass\" \"npm run compile:pug\" \"npm run devserver\""
   },
   "repository": {
     "type": "git",
@@ -29,5 +31,7 @@
     "live-server": "^1.2.0",
     "node-sass": "^4.10.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
 }
