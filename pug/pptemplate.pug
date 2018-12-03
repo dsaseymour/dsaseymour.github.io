@@ -1,6 +1,29 @@
 doctype html 
-html 
-    head 
-        title
+html
+    include ./mixins/projectcontent.pug
+    include ./mixins/projecthead.pug
+    include ./mixins/projectnav.pug
+    include ./mixins/projectfooter.pug
+    +projecthead({
+                title:"Project Title",
+                })
     body.pp-grid__container
-    
+        +projectnav({
+                projectname:"Project Name"
+        })
+        +projectcontent({
+            projectpitch:"How do we accomplish xyz?",
+            projectname:"Project Name",
+            techstackclasses: ["fab fa-node","fab fa-node","fab fa-node"],
+            screencapurl1:"./img/video.webm",            screencapurl2:"./img/video.mp4",
+            livelink:"#",
+            github:"#",
+            documentation:"#",
+            challengetext:"challenges were",
+            solutiontext:" solution was",
+            outcometext:"outcome was",
+        })
+        +projectfooter({
+
+        })
+        
