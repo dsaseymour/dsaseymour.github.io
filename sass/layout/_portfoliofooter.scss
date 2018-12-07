@@ -3,13 +3,13 @@
   grid-column: full-start/full-end;
   grid-row: footer-start/footer-end;
   display: grid;
-  grid-template-columns: [historybackcol-start] 40rem [historybackcol-end] 2fr [backtotopcol-start] 40rem [backtotopcol-end];
+  grid-template-columns: [historybackcol-start] 20rem [historybackcol-end] 1fr [backtotopcol-start] 20rem [backtotopcol-end];
 
   &__historybackcontent {
     grid-column: historybackcol-start/historybackcol-end;
   }
 
-  &___backtotopcontent {
+  &__backtotopcontent {
     grid-column: backtotopcol-start/backtotopcol-end;
   }
 }

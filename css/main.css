@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 /* //========================
 //COLORS BEGINS 
 //========================  */
@@ -257,40 +274,51 @@ h2 {
          Contact
          Footer
     */
-  grid-template-rows: [nav-start] 80vw [nav-end header-start] 100vw [header-end about-start] 30vw [about-end portfolio-start] 80vw [portfolio-end contact-start] min-content [contact-end footer-start] 80vw [footer-end];
-  grid-template-columns: [full-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [full-end]; }
+  grid-template-rows: [nav-start] 10vh [nav-end header-start] 90vh [header-end about-start] 100vh [about-end portfolio-start] 45vh [portfolio-end contact-start] 70vh [contact-end footer-start] 20vh [footer-end];
+  grid-template-columns: [full-start] minmax(0, 1fr) repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) minmax(0, 1fr) [full-end]; }
 
 .section-about {
   grid-column: full-start / full-end;
   grid-row: about-start/about-end;
   display: grid;
   padding: 1.5rem;
-  grid-template-rows: [aboutrow-fullstart] repeat(1, [aboutrow-start] minmax(min-content, 14rem) [aboutrow-end]) [aboutrow-fullend];
-  grid-template-columns: [aboutcol-fullstart] minmax(0, 1fr) repeat(4, [aboutcol-start] minmax(min-content, 14rem) [aboutcol-end]) minmax(0, 1fr) [aboutcol-fullend];
+  grid-template-rows: [aboutrow-fullstart] repeat(1, [aboutrow-start] 100% [aboutrow-end]) [aboutrow-fullend];
+  grid-template-columns: [aboutcol-fullstart] minmax(0, 1fr) repeat(4, [aboutcol-start] minmax(min-content, 20vw) [aboutcol-end]) minmax(0, 1fr) [aboutcol-fullend];
   background-image: linear-gradient(to right bottom, rgba(202, 150, 35, 0.8), rgba(226, 198, 70, 0.8)), url(../img/backimg7.jpg);
   background-size: cover; }
 
 .about___img-box {
+  max-height: 100%;
   padding: 1.25rem;
   grid-column: aboutcol-start 1 / aboutcol-end 1;
-  grid-row: aboutrow-fullstart/ aboutrow-fullend; }
+  grid-row: aboutrow-fullstart/ aboutrow-fullend;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .about__shape {
-  height: 15rem;
-  /*  
-  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);*/ }
+  border-radius: 100px;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border: 2px solid #5a2e13;
+  /* -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); */ }
 
 .about__img {
-  height: 100%;
-  border-radius: 100px;
-  border: 2px solid #5a2e13; }
+  object-fit: cover;
+  width: 100%;
+  height: 100%; }
 
 .about__text-box {
   padding: 1.25rem;
-  font-size: 1.3rem;
+  font-size: 3rem;
   grid-column: aboutcol-start 3 / aboutcol-end 4;
-  grid-row: aboutrow-fullstart/ aboutrow-fullend; }
+  grid-row: aboutrow-fullstart/ aboutrow-fullend;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
 
 .about__socialrow {
   text-align: center;
@@ -302,7 +330,7 @@ h2 {
 .aboutsocial__link {
   margin-right: 2rem; }
   .aboutsocial__link i {
-    font-size: 2.5rem; }
+    font-size: 6rem; }
   .aboutsocial__link:link, .aboutsocial__link:visited {
     font-size: 1.6rem;
     color: #5a2e13;
@@ -321,12 +349,13 @@ h2 {
   grid-column: full-start / full-end;
   grid-row: portfolio-start/portfolio-end;
   display: grid;
-  grid-template-rows: minmax(min-content, 8rem) min-content;
+  grid-template-rows: [textboxrow-start] minmax(min-content, 50vh) [textboxrow-start linkboxrow-start] min-content [linkboxrow-end];
   grid-template-columns: minmax(0, 0.2fr) [portfoliocontentcol-start] minmax(0, 1fr) [portfoliocontentcol-end] minmax(0, 0.2fr);
   overflow: hidden; }
 
 .portfolio__text-box {
   grid-column: portfoliocontentcol-start/portfoliocontentcol-end;
+  grid-row: textboxrow-start/textboxrow-end;
   padding: 1.25rem;
   z-index: 5; }
 
@@ -339,6 +368,7 @@ li {
 
 .portfolio___link-box {
   grid-column: portfoliocontentcol-start/portfoliocontentcol-end;
+  grid-row: linkboxrow-start/linkboxrow-end;
   padding: 1.25rem;
   display: flex;
   justify-content: center; }
@@ -364,8 +394,8 @@ li {
           Content     10
           Footer //this will probably just contain a back to the top button
       */
-  grid-template-rows: [nav-start] 80vw [nav-end contentrows-start] repeat(8, [row-start] minmax(min-content, 6vh) [row-end]) [contentrows-end footer-start] 80vw [footer-end];
-  grid-template-columns: [full-start] repeat(3, [col-start] minmax(min-content, 14rem) [col-end]) [full-end]; }
+  grid-template-rows: [nav-start] 8vh [nav-end contentrows-start] repeat(8, [row-start] minmax(min-content, 30vh) [row-end]) [contentrows-end footer-start] 10vh [footer-end];
+  grid-template-columns: [full-start] minmax(0, 1fr) repeat(3, [col-start] minmax(min-content, 30vw) [col-end]) minmax(0, 1fr) [full-end]; }
 
 .portfoliocontent-box {
   display: grid;
@@ -377,7 +407,8 @@ li {
   justify-content: center; }
   .contentrow__card {
     padding: 2rem;
-    width: 30vw;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -388,6 +419,15 @@ li {
     margin-bottom: 1rem; }
     .contentrow__card:not(:last-child) {
       margin-right: 1rem; }
+
+.pp-grid__container {
+  display: grid;
+  grid-template-rows: [nav-start] 80vw [nav-end contentrow-start] 200vw [contentrows-end footer-start] 80vw [footer-end]; }
+
+.project-content {
+  display: grid;
+  grid-template-rows: [nav-start] 80vw [nav-end contentrows-start] repeat(8, [row-start] minmax(min-content, 6vh) [row-end]) [contentrows-end footer-start] 80vw [footer-end];
+  grid-template-columns: [full-start] repeat(3, [col-start] minmax(min-content, 14rem) [col-end]) [full-end]; }
 
 .navigation {
   padding: 0.5rem;
@@ -430,8 +470,6 @@ li {
   grid-column: full-start / full-end;
   grid-row: header-start/header-end;
   background-color: transparent; }
-  .header__hpanel-box {
-    overflow: hidden; }
 
 .hpanel {
   /*
@@ -444,18 +482,20 @@ li {
   background-color: transparent; }
   .hpanel__content {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) [videobox-start] 30vw [videobox-end textbox-start] 30vw [textbox-end] minmax(0, 1fr);
+    grid-template-columns: minmax(0, 0.3fr) [mediabox-start] 60vh [mediabox-end textbox-start] 60vh [textbox-end] minmax(0, 0.3fr);
     grid-gap: 5rem;
-    grid-template-rows: [row-start] 57vh [row-end]; }
+    grid-template-rows: [row-start] 100% [row-end]; }
   .hpanel__media-box {
     grid-row: row-start/row-end;
-    grid-column: videobox-start/videobox-end;
+    grid-column: mediabox-start/mediabox-end;
     overflow: hidden; }
   .hpanel__video {
     object-fit: cover;
-    max-height: 40vh; }
+    max-height: 100%; }
   .hpanel__img {
-    height: 100%; }
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
   .hpanel__text-box {
     padding: 0.3rem;
     grid-row: row-start/row-end;
@@ -540,8 +580,8 @@ li {
   grid-column: full-start/full-end;
   grid-row: footer-start/footer-end;
   display: grid;
-  grid-template-columns: [historybackcol-start] 40rem [historybackcol-end] 2fr [backtotopcol-start] 40rem [backtotopcol-end]; }
+  grid-template-columns: [historybackcol-start] 20rem [historybackcol-end] 1fr [backtotopcol-start] 20rem [backtotopcol-end]; }
   .portfoliofooter__historybackcontent {
     grid-column: historybackcol-start/historybackcol-end; }
-  .portfoliofooter___backtoptopcontent {
+  .portfoliofooter__backtotopcontent {
     grid-column: backtotopcol-start/backtotopcol-end; }

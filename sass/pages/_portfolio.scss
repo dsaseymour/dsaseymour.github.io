@@ -8,13 +8,17 @@
       */
 
   grid-template-rows:
-    [nav-start]80vw[nav-end contentrows-start] repeat(
+    [nav-start]8vh[nav-end contentrows-start] repeat(
       8,
-      [row-start] minmax(min-content, 6vh) [row-end]
+      [row-start] minmax(min-content, 30vh) [row-end]
     )
-    [contentrows-end footer-start]80vw [footer-end];
+    [contentrows-end footer-start]10vh [footer-end];
   grid-template-columns:
-    [full-start] repeat(3, [col-start] minmax(min-content, 14rem) [col-end])
+    [full-start] minmax(0, 1fr) repeat(
+      3,
+      [col-start] minmax(min-content, 30vw) [col-end]
+    )
+    minmax(0, 1fr)
     [full-end];
 }
 .portfoliocontent-box {
@@ -28,7 +32,8 @@
 
   &__card {
     padding: 2rem;
-    width: 30vw;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

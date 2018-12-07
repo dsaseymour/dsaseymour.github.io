@@ -5,7 +5,6 @@
   background-color: transparent;
 
   &__hpanel-box {
-    overflow: hidden;
   }
 }
 
@@ -26,24 +25,26 @@
   //---hpanel content begins-------------------------------------------
   &__content {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) [videobox-start]30vw[videobox-end textbox-start] 30vw [textbox-end] minmax(
+    grid-template-columns: minmax(0, 0.3fr) [mediabox-start]60vh[mediabox-end textbox-start] 60vh [textbox-end] minmax(
         0,
-        1fr
+        0.3fr
       );
     grid-gap: 5rem;
-    grid-template-rows: [row-start] 57vh [row-end];
+    grid-template-rows: [row-start] 100% [row-end];
   }
   &__media-box {
     grid-row: row-start/row-end;
-    grid-column: videobox-start/videobox-end; // background-color: red;
+    grid-column: mediabox-start/mediabox-end; // background-color: red;
     overflow: hidden;
   }
   &__video {
     object-fit: cover;
-    max-height: 40vh;
+    max-height: 100%;
   }
   &__img {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
   &__text-box {
     padding: 0.3rem;
