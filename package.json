@@ -29,9 +29,8 @@
   "devDependencies": {
     "concurrently": "^4.0.1",
     "live-server": "^1.2.0",
-    "node-sass": "^4.10.0"
-  },
-  "dependencies": {
+    "node-sass": "^4.10.0",
     "pug-cli": "^1.0.0-alpha6"
-  }
+  },
+  "dependencies": {}
 }
