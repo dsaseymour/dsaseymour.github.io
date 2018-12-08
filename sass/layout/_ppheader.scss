@@ -2,15 +2,33 @@
   grid-row: projectpanel-start/projectpanel-end;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   padding: 1.3rem;
+
+  &__media video {
+    height: 60vh;
+    width: 60vw;
+  }
+
+  &__media {
+    margin: 1rem 0;
+  }
+
+  &__link-box {
+  }
+
+  &__link-box a {
+    &:not(:last-child) {
+      margin-right: 0.9rem;
+    }
+  }
 
   &__heading {
   }
 
-  &__content {
+  &__status {
   }
 
-  &__link-box {
+  &__content {
   }
 }

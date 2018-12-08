@@ -6,20 +6,23 @@ mixin projectContent(pCData)
       .projectpanel__status     
         p= pCData.projectstatus
       .projectpanel__media 
-        video( autoplay muted loop) 
+        video.projectpanelvideo( autoplay muted loop) 
           source(src=pCData.screencapurl1 type="video/mp4")
           source(src=pCData.screencapurl2 type="video/webm")
       .projectpanel__link-box 
-        a.projectpanel__link.btn(href=pCData.livelink )
-          i(class=pCData.techstackclass1) Live Site
-        a.projectpanel__link.btn(href=pCData.livelink )
-          i(class=pCData.techstackclass2) Github
-        a.projectpanel__link.btn(href=pCData.livelink) 
-          i(class=pCData.techstackclass3) Documentation
+        a.projectpanel__link.btn.btn--basic(href=pCData.livelink )
+          i(class=pCData.livesiteclass) Live Site
+        a.projectpanel__link.btn.btn--basic(href=pCData.livelink )
+          i(class=pCData.githubclass) Github
+        a.projectpanel__link.btn.btn--basic(href=pCData.livelink) 
+          i(class=pCData.documentationclass) Documentation
     .projectchallenge 
-      p= pCData.challengetext
+      h1.ppheading CHALLENGES: 
+      p.ppcsocontent= pCData.challengetext
     .projectso
       .projectsolution 
-        p= pCData.solutiontext
+        h1.ppheading SOLUTION:
+        p.ppcsocontent= pCData.solutiontext
       .projectoutcome 
-        p= pCData.outcometext
+        h1.ppheading OUTCOME:
+        p.ppcsocontent= pCData.outcometext

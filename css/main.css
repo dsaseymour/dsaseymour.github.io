@@ -83,7 +83,7 @@ h2 {
   text-align: center; }
 
 .contentrowcard__projectname {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #5a2e13;
   font-weight: 300;
   text-align: center; }
@@ -394,22 +394,24 @@ li {
           Content     10
           Footer //this will probably just contain a back to the top button
       */
-  grid-template-rows: [nav-start] 8vh [nav-end contentrows-start] repeat(8, [row-start] minmax(min-content, 30vh) [row-end]) [contentrows-end footer-start] 10vh [footer-end];
+  grid-template-rows: [nav-start] 8vh [nav-end contentrows-start] repeat(8, [row-start] minmax(min-content, 20vh) [row-end]) [contentrows-end footer-start] 10vh [footer-end];
   grid-template-columns: [full-start] minmax(0, 1fr) repeat(3, [col-start] minmax(min-content, 30vw) [col-end]) minmax(0, 1fr) [full-end]; }
 
 .portfoliocontent-box {
   display: grid;
-  grid-column: full-start/full-end;
+  grid-column: col-start 1 / col-end 3;
   grid-row: contentrows-start/contentrows-end; }
 
 .contentrow {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin: 3rem 3rem; }
   .contentrow__card {
     padding: 2rem;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     display: flex;
+    font-size: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -420,28 +422,53 @@ li {
     .contentrow__card:not(:last-child) {
       margin-right: 1rem; }
 
+.contentrowcard__heading {
+  font-size: 2rem; }
+
+.contentrowcard__projectname {
+  font-size: 2rem; }
+
+.contentrowcard__projectechlist {
+  font-size: 2rem; }
+
+.contentrowcard__content {
+  font-size: 2rem; }
+
+.contentrowcard__linklist {
+  font-size: 2rem; }
+
+.contentrowcard__text-box {
+  font-size: 2rem; }
+
 .pp-grid__container {
   display: grid;
-  grid-template-rows: [ppnav-start] 10vh [ppnav-end ppcontentrow-start] 165vh [ppcontentrow-end ppfooter-start] 20vh [ppfooter-end]; }
+  grid-template-rows: [ppnav-start] 10vh [ppnav-end ppcontentrow-start] 143vh [ppcontentrow-end ppfooter-start] 20vh [ppfooter-end]; }
 
 .project-content {
   grid-row: ppcontentrow-start/ppcontentrow-end;
   display: grid;
-  grid-template-rows: [projectpanel-start] 100vh [projectpanel-end projectchallenge-start] 40vh [projectchallenge-end projectso-start] 40vh [projectso-end];
+  grid-template-rows: [projectpanel-start] 80vh [projectpanel-end projectchallenge-start] 40vh [projectchallenge-end projectso-start] 40vh [projectso-end];
   grid-template-columns: [full-start] repeat(3, [col-start] minmax(min-content, 30vw) [col-end]) [full-end]; }
 
-.projectpanel {
-  grid-row: projectpanel-start/projectpanel-end; }
-
 .projectchallenge {
-  grid-row: projectchallenge-start/projectchallenge-end;
-  background-color: red; }
+  padding: 2rem;
+  grid-row: projectchallenge-start/projectchallenge-end; }
 
 .projectso {
   grid-row: projectso-start/projectso-end;
   display: grid;
-  grid-template-columns: 50vw 50vw;
-  background-color: blue; }
+  grid-template-columns: 50vw 50vw; }
+
+.projectsolution {
+  padding: 2rem; }
+
+.projectoutcome {
+  padding: 2rem; }
+
+.ppcsocontent {
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.5rem; }
 
 .navigation {
   padding: 0.5rem;
@@ -635,3 +662,17 @@ li {
     grid-column: ppfoothistorybackcol-start/ppfoothistorybackcol-end; }
   .ppfooter__backtotopcontent {
     grid-column: ppfootbacktotopcol-start/ppfootbacktotopcol-end; }
+
+.projectpanel {
+  grid-row: projectpanel-start/projectpanel-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.3rem; }
+  .projectpanel__media video {
+    height: 60vh;
+    width: 60vw; }
+  .projectpanel__media {
+    margin: 1rem 0; }
+  .projectpanel__link-box a:not(:last-child) {
+    margin-right: 0.9rem; }
