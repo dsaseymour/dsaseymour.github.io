@@ -1,8 +1,10 @@
 mixin projectContent(pCData)
   section.project-content
     .projectpanel 
-      .projectpanel__heading pCData.projectname
-      .projectpanel__status  pCData.projectstatus
+      .projectpanel__heading 
+        h1= pCData.projectname
+      .projectpanel__status     
+        p= pCData.projectstatus
       .projectpanel__media 
         video( autoplay muted loop) 
           source(src=pCData.screencapurl1 type="video/mp4")
@@ -14,6 +16,9 @@ mixin projectContent(pCData)
           i(class=pCData.techstackclass2) Github
         a.projectpanel__link.btn(href=pCData.livelink) 
           i(class=pCData.techstackclass3) Documentation
-    .projectchallenge pcData.challengetext
-    .projectsolution pcData.solutiontext
-    .projectoutcome pcData.outcometext
+    .projectchallenge 
+      p= pCData.challengetext
+    .projectsolution 
+      p= pCData.solutiontext
+    .projectoutcome 
+      p= pCData.outcometext
