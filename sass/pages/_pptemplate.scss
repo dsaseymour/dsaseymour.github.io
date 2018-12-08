@@ -1,20 +1,15 @@
 .pp-grid__container {
   display: grid;
   grid-template-rows:
-    [nav-start]80vw[nav-end contentrow-start] 200vw
-    [contentrows-end footer-start]80vw [footer-end];
+    [nav-start]10vh[nav-end contentrow-start] 300vh
+    [contentrows-end footer-start]20vh [footer-end];
 }
 
 .project-content {
   display: grid;
-  grid-template-rows:
-    [nav-start]80vw[nav-end contentrows-start] repeat(
-      8,
-      [row-start] minmax(min-content, 6vh) [row-end]
-    )
-    [contentrows-end footer-start]80vw [footer-end];
+  grid-template-rows: ;
   grid-template-columns:
-    [full-start] repeat(3, [col-start] minmax(min-content, 14rem) [col-end])
+    [full-start] repeat(3, [col-start] minmax(min-content, 30vw) [col-end])
     [full-end];
 }
 

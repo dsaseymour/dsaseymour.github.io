@@ -1,9 +1,19 @@
 mixin projectContent(pCData)
-section.project-content
-  .projectpanel 
-    .projectpanel__heading
-    .projectpanel__content
-    .projectpanel__link-box
-  .projectchallenge
-  .projectsolution
-  .projectoutcome
+  section.project-content
+    .projectpanel 
+      .projectpanel__heading pCData.projectname
+      .projectpanel__status  pCData.projectstatus
+      .projectpanel__media 
+        video( autoplay muted loop) 
+          source(src=pCData.screencapurl1 type="video/mp4")
+          source(src=pCData.screencapurl2 type="video/webm")
+      .projectpanel__link-box 
+        a.projectpanel__link.btn(href=pCData.livelink )
+          i(class=pCData.techstackclass1) Live Site
+        a.projectpanel__link.btn(href=pCData.livelink )
+          i(class=pCData.techstackclass2) Github
+        a.projectpanel__link.btn(href=pCData.livelink) 
+          i(class=pCData.techstackclass3) Documentation
+    .projectchallenge pcData.challengetext
+    .projectsolution pcData.solutiontext
+    .projectoutcome pcData.outcometext
