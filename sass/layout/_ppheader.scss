@@ -1,0 +1,16 @@
+.projectpanel {
+  grid-row: projectpanel-start/projectpanel-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.3rem;
+
+  &__heading {
+  }
+
+  &__content {
+  }
+
+  &__link-box {
+  }
+}

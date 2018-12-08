@@ -1,0 +1,15 @@
+.ppfooter {
+  grid-row: ppfooter-start/ppfooter-end;
+  padding: 0.5rem;
+  grid-row: footer-start/footer-end;
+  display: grid;
+  grid-template-columns: [ppfoothistorybackcol-start] 20rem [ppfoothistorybackcol-end] 1fr [ppfootbacktotopcol-start] 20rem [ppfootbacktotopcol-end];
+
+  &__historybackcontent {
+    grid-column: ppfoothistorybackcol-start/ppfoothistorybackcol-end;
+  }
+
+  &__backtotopcontent {
+    grid-column: ppfootbacktotopcol-start/ppfootbacktotopcol-end;
+  }
+}

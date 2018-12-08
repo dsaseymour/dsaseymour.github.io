@@ -1,34 +1,27 @@
 .pp-grid__container {
   display: grid;
   grid-template-rows:
-    [nav-start]10vh[nav-end contentrow-start] 300vh
-    [contentrows-end footer-start]20vh [footer-end];
+    [ppnav-start]10vh[ppnav-end ppcontentrow-start] 165vh
+    [ppcontentrow-end ppfooter-start]20vh[ppfooter-end];
 }
 
 .project-content {
+  grid-row: ppcontentrow-start/ppcontentrow-end;
   display: grid;
-  grid-template-rows: ;
+  grid-template-rows: [projectpanel-start] 100vh [projectpanel-end projectchallenge-start] 40vh [projectchallenge-end projectso-start] 40vh [projectso-end];
   grid-template-columns:
     [full-start] repeat(3, [col-start] minmax(min-content, 30vw) [col-end])
     [full-end];
 }
 
-.projectpanel {
-  &__heading {
-  }
-
-  &__content {
-  }
-
-  &__link-box {
-  }
-}
-
 .projectchallenge {
+  grid-row: projectchallenge-start/projectchallenge-end;
+  background-color: red;
 }
 
-.projectsolution {
-}
-
-.projectoutcome {
+.projectso {
+  grid-row: projectso-start/projectso-end;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  background-color: blue;
 }
