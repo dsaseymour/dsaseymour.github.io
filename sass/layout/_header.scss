@@ -31,16 +31,7 @@
       );
     grid-gap: 5rem;
     grid-template-rows: [row-start] 100% [row-end];
-    @include respond(tab-land) {
-      // width < 1200?
-    }
-    @include respond(tab-port) {
-      // width < 900?
-    }
-    @include respond(phone) {
-    }
   }
-
   &__media-box {
     grid-row: row-start/row-end;
     grid-column: mediabox-start/mediabox-end; // background-color: red;
@@ -74,3 +65,70 @@
 .hpanelbtn i {
   margin-right: 0.5rem;
 }
+// HEADER RESPONSIVE DEFINITION BEGIN
+@include respond(tab-land) {
+  // width < 1200? HE
+  .header {
+  }
+  .hpanel {
+    &__content {
+    }
+    &__media-box {
+    }
+    &__video {
+    }
+    &__img {
+    }
+    &__text-box {
+    }
+    &__projecttechlist {
+    }
+  }
+  .hpanelbtn i {
+  }
+}
+@include respond(tab-port) {
+  .header {
+  }
+  .hpanel {
+    &__content {
+    }
+    &__media-box {
+    }
+    &__video {
+    }
+    &__img {
+    }
+    &__text-box {
+    }
+    &__projecttechlist {
+    }
+  }
+  .hpanelbtn i {
+  }
+}
+@include respond(phone) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .hpanel {
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    &__media-box {
+    }
+    &__video {
+    }
+    &__img {
+    }
+    &__text-box {
+    }
+    &__projecttechlist {
+    }
+  }
+  .hpanelbtn i {
+  }
+}
+// HEADER RESPONSIVE DEFINITION ENDS

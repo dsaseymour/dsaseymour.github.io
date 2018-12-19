@@ -6,20 +6,6 @@
   display: grid;
   grid-template-columns: 0.3fr [leftcol-start]min-content [leftcol-end] 1fr [middlecol-start] 20rem [middlecol-end] 1fr [rightcol-start] 50rem [rightcol-end] 0.3fr;
 
-  @include respond(tab-land) {
-    // width < 1200?
-    //
-  }
-
-  @include respond(tab-port) {
-    // width < 900?
-    //
-  }
-
-  @include respond(phone) {
-    //
-  }
-
   &__logo-box {
     grid-column: leftcol-start / leftcol-end;
     display: flex;
@@ -63,4 +49,73 @@
 
 #navimg {
   max-width: 3rem;
+}
+
+@include respond(tab-land) {
+  .navigation {
+    &__logo-box {
+    }
+
+    &__centercontent-box {
+    }
+
+    &__list-box {
+    }
+
+    &__item {
+    }
+  }
+
+  #navigation__centercontent-heading {
+  }
+
+  #navimg {
+  }
+}
+
+@include respond(tab-port) {
+  .navigation {
+    &__logo-box {
+    }
+
+    &__centercontent-box {
+    }
+
+    &__list-box {
+    }
+
+    &__item {
+    }
+  }
+
+  #navigation__centercontent-heading {
+  }
+
+  #navimg {
+  }
+}
+
+@include respond(phone) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+
+    &__logo-box {
+    }
+
+    &__centercontent-box {
+    }
+
+    &__list-box {
+    }
+
+    &__item {
+    }
+  }
+
+  #navigation__centercontent-heading {
+  }
+
+  #navimg {
+  }
 }

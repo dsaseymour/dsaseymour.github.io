@@ -1,14 +1,6 @@
+//GRID CONTAINER BEGINS----------------------------------
 .grid__container {
   display: grid;
-  /*
-      We'll have at least 6 rows 
-         Nav
-         Head
-         About Me
-         Portfolio
-         Contact
-         Footer
-    */
   grid-template-rows: [nav-start]10vh[nav-end header-start] 90vh [header-end about-start] 100vh [about-end portfolio-start]45vh [portfolio-end contact-start] 70vh [contact-end footer-start]20vh [footer-end];
   grid-template-columns:
     [full-start] minmax(0, 1fr) repeat(
@@ -17,6 +9,7 @@
     )
     minmax(0, 1fr) [full-end];
 
+  //GRID CONTAINER RESPONSIVE DEFINITION BEGIN
   @include respond(tab-land) {
     // width < 1200?
     //
@@ -28,10 +21,12 @@
   }
 
   @include respond(phone) {
-    //
+    display: flex;
+    flex-direction: column;
   }
+  //GRID CONTAINER RESPONSIVE DEFINITION ENDS
 }
-
+//GRID CONTAINER ENDS----------------------------------
 //ABOUT SECTION BEGINS----------------------------------
 .section-about {
   grid-column: full-start / full-end;
@@ -120,6 +115,42 @@
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
   }
 }
+
+//ABOUT RESPONSIVE DEFINITION BEGIN
+@include respond(tab-land) {
+}
+
+@include respond(tab-port) {
+}
+
+@include respond(phone) {
+  .section-about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about___img-box {
+    max-height: 100%;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .about__text-box {
+    padding: 1.25rem;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+////ABOUT RESPONSIVE DEFINITION END
+
 // ABOUT SECTION ENDS-----------------------------------
 // PORTFOLIO SECTION BEGINS-------------------------
 .section-portfolio {
@@ -157,6 +188,22 @@ li {
   display: inline-block;
   margin-right: 20rem;
 }
+
+//PORTFOLIO RESPONSIVE DEFINITION BEGIN
+@include respond(tab-land) {
+}
+
+@include respond(tab-port) {
+}
+
+@include respond(phone) {
+  .section-portfolio {
+    display: flex;
+    flex-direction: column;
+  }
+}
+////PORTFOLIO RESPONSIVE DEFINITION END
+
 // PORTFOLIO SECTION END-------------------------
 // CONTACT SECTION END-------------------------
 .section-contact {
