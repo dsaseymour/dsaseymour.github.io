@@ -355,7 +355,7 @@ select {
   grid-column: full-start / full-end;
   grid-row: portfolio-start/portfolio-end;
   display: grid;
-  grid-template-rows: [textboxrow-start] minmax(min-content, 50vh) [textboxrow-start linkboxrow-start] min-content [linkboxrow-end];
+  grid-template-rows: [textboxrow-start] minmax(min-content, 50vh) [textboxrow-end linkboxrow-start] min-content [linkboxrow-end];
   grid-template-columns: minmax(0, 0.2fr) [portfoliocontentcol-start] minmax(0, 1fr) [portfoliocontentcol-end] minmax(0, 0.2fr);
   overflow: hidden; }
 
