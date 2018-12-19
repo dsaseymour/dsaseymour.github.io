@@ -1,3 +1,7 @@
+// ================================================
+// HEADER BEGINS
+// ================================================
+
 .header {
   grid-column: full-start / full-end;
   grid-row: header-start/header-end;
@@ -65,7 +69,10 @@
 .hpanelbtn i {
   margin-right: 0.5rem;
 }
-// HEADER RESPONSIVE DEFINITION BEGIN
+// ================================================
+// HEADER RESPONSIVE DEFINITION BEGINS
+// ================================================
+// HEADER RSP TAB-LAND BEGINS----------------------------------
 @include respond(tab-land) {
   // width < 1200? HE
   .header {
@@ -87,6 +94,8 @@
   .hpanelbtn i {
   }
 }
+// HEADER RSP TAB-LAND ENDS----------------------------------
+// HEADER RSP TAB-PORT BEGINS----------------------------------
 @include respond(tab-port) {
   .header {
   }
@@ -107,6 +116,8 @@
   .hpanelbtn i {
   }
 }
+// HEADER RSP TAB-PORT ENDS----------------------------------
+// HEADER RSP PHONE BEGINS----------------------------------
 @include respond(phone) {
   .header {
     display: flex;
@@ -131,4 +142,10 @@
   .hpanelbtn i {
   }
 }
+// HEADER RSP PHONE ENDS----------------------------------
+// ================================================
 // HEADER RESPONSIVE DEFINITION ENDS
+// ================================================
+// ================================================
+// HEADER ENDS
+// ================================================

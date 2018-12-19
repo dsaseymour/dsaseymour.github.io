@@ -1,3 +1,6 @@
+// ================================================
+// NAVIGATION BEGINS
+// ================================================
 .navigation {
   padding: 0.5rem;
   //  background-color: blue;
@@ -50,7 +53,10 @@
 #navimg {
   max-width: 3rem;
 }
-
+// ================================================
+// NAVIGATION RESPONSIVE DEFINITION BEGINS
+// ================================================
+// NAVIGATION RSP TAB-LAND BEGINS----------------------------------
 @include respond(tab-land) {
   .navigation {
     &__logo-box {
@@ -72,6 +78,8 @@
   #navimg {
   }
 }
+// NAVIGATION RSP TAB-LAND ENDS----------------------------------
+// NAVIGATION RSP TAB-PORT BEGINS----------------------------------
 
 @include respond(tab-port) {
   .navigation {
@@ -94,19 +102,23 @@
   #navimg {
   }
 }
+// NAVIGATION RSP TAB-PORT ENDS----------------------------------
+// NAVIGATION RSP PHONE BEGINS----------------------------------
 
 @include respond(phone) {
   .navigation {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     &__logo-box {
+      margin-right: 45vw;
     }
 
     &__centercontent-box {
     }
 
     &__list-box {
+      display: none;
     }
 
     &__item {
@@ -119,3 +131,10 @@
   #navimg {
   }
 }
+// NAVIGATION RSP PHONE ENDS----------------------------------
+// ================================================
+// NAVIGATION RESPONSIVE DEFINITION ENDS
+// ================================================
+// ================================================
+// NAVIGATION ENDS
+// ================================================

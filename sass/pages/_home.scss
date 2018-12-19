@@ -1,4 +1,6 @@
-//GRID CONTAINER BEGINS----------------------------------
+// ================================================
+// GRID CONTAINER BEGINS
+// ================================================
 .grid__container {
   display: grid;
   grid-template-rows: [nav-start]10vh[nav-end header-start] 90vh [header-end about-start] 100vh [about-end portfolio-start]45vh [portfolio-end contact-start] 70vh [contact-end footer-start]20vh [footer-end];
@@ -8,8 +10,9 @@
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     minmax(0, 1fr) [full-end];
-
-  //GRID CONTAINER RESPONSIVE DEFINITION BEGIN
+  // ================================================
+  // GRID CONTAINER RESPONSIVE DEFINITION BEGINS
+  // ================================================
   @include respond(tab-land) {
     // width < 1200?
     //
@@ -24,10 +27,16 @@
     display: flex;
     flex-direction: column;
   }
-  //GRID CONTAINER RESPONSIVE DEFINITION ENDS
+  // ================================================
+  // GRID CONTAINER RESPONSIVE DEFINITION ENDS
+  // ================================================
 }
-//GRID CONTAINER ENDS----------------------------------
-//ABOUT SECTION BEGINS----------------------------------
+// ================================================
+// GRID CONTAINER ENDS
+// ================================================
+// ================================================
+// ABOUT SECTION BEGINS
+// ================================================
 .section-about {
   grid-column: full-start / full-end;
   grid-row: about-start/about-end;
@@ -151,8 +160,12 @@
 }
 ////ABOUT RESPONSIVE DEFINITION END
 
-// ABOUT SECTION ENDS-----------------------------------
-// PORTFOLIO SECTION BEGINS-------------------------
+// ================================================
+// ABOUT SECTION BEGINS
+// ================================================
+// ================================================
+// PORTFOLIO SECTION BEGINS
+// ================================================
 .section-portfolio {
   // background-color: green;
   grid-column: full-start / full-end;
@@ -204,8 +217,12 @@ li {
 }
 ////PORTFOLIO RESPONSIVE DEFINITION END
 
-// PORTFOLIO SECTION END-------------------------
-// CONTACT SECTION END-------------------------
+// ================================================
+// PORTFOLIO SECTION ENDS
+// ================================================
+// ================================================
+// CONTACT SECTION BEGINS
+// ================================================
 .section-contact {
   // background-color: orange;
   grid-column: full-start / full-end;
@@ -228,4 +245,6 @@ li {
     url(../img/backimg8.jpg);
   background-size: cover;
 }
-// CONTACT SECTION END-------------------------
+// ================================================
+// CONTACT SECTION ENDS
+// ================================================
