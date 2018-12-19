@@ -3,6 +3,20 @@
   grid-template-rows:
     [ppnav-start]10vh[ppnav-end ppcontentrow-start] 143vh
     [ppcontentrow-end ppfooter-start]20vh[ppfooter-end];
+
+  @include respond(tab-land) {
+    // width < 1200?
+    //
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    //
+  }
+
+  @include respond(phone) {
+    //
+  }
 }
 
 .project-content {

@@ -20,6 +20,20 @@
     )
     minmax(0, 1fr)
     [full-end];
+
+  @include respond(tab-land) {
+    // width < 1200?
+    //
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    //
+  }
+
+  @include respond(phone) {
+    //
+  }
 }
 .portfoliocontent-box {
   display: grid;

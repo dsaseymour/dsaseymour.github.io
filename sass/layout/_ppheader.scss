@@ -5,6 +5,20 @@
   align-items: center;
   padding: 1.3rem;
 
+  @include respond(tab-land) {
+    // width < 1200?
+    //
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    //
+  }
+
+  @include respond(phone) {
+    //
+  }
+
   &__media video {
     height: 60vh;
     width: 60vw;

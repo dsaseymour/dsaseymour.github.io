@@ -188,7 +188,7 @@ h2 {
   margin-bottom: 0.5rem; }
 
 .crcbtn {
-  margin: .3rem; }
+  margin: 0.3rem; }
   .crcbtn, .crcbtn:link, .crcbtn:visited {
     text-transform: uppercase;
     text-decoration: none;
@@ -196,7 +196,7 @@ h2 {
     display: inline-block;
     border-radius: 0.5rem;
     font-size: 1rem;
-    border: .2px solid black;
+    border: 0.2px solid black;
     cursor: pointer; }
   .crcbtn:hover {
     color: white;
@@ -208,6 +208,12 @@ h2 {
     box-shadow: 0 0.5rem 1rem rgba(202, 150, 35, 0.2); }
   .crcbtn:not(:last-child) {
     margin-bottom: 0.5rem; }
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit; }
 
 .form {
   padding: 1.5rem;

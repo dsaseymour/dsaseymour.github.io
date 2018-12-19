@@ -5,6 +5,20 @@
   display: grid;
   grid-template-columns: [ppfoothistorybackcol-start] 20rem [ppfoothistorybackcol-end] 1fr [ppfootbacktotopcol-start] 20rem [ppfootbacktotopcol-end];
 
+  @include respond(tab-land) {
+    // width < 1200?
+    //
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    //
+  }
+
+  @include respond(phone) {
+    //
+  }
+
   &__historybackcontent {
     grid-column: ppfoothistorybackcol-start/ppfoothistorybackcol-end;
   }

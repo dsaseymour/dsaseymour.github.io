@@ -4,6 +4,20 @@
   display: grid;
   grid-template-columns: 0.3fr [ppnavleftcol-start]min-content [ppnavleftcol-end] 1fr [ppnavmiddlecol-start] 20rem [ppnavmiddlecol-end] 1fr [ppnavrightcol-start] 30rem [ppnavrightcol-end] 0.3fr;
 
+  @include respond(tab-land) {
+    // width < 1200?
+    //
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    //
+  }
+
+  @include respond(phone) {
+    //
+  }
+
   &__logo-box {
     grid-column: ppnavleftcol-start / ppnavleftcol-end;
     display: flex;
