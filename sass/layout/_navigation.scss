@@ -64,7 +64,7 @@
 
   &:checked ~ .navigation__nav {
     width: 100vw;
-    opacity: 1;
+    opacity: 100;
   }
 
   &:checked + .navigation__button .navigation__icon {
@@ -87,8 +87,9 @@
   opacity: 0;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 1500;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
