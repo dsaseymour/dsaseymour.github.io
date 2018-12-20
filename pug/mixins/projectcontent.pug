@@ -10,12 +10,13 @@ mixin projectContent(pCData)
           source(src=pCData.screencapurl1 type="video/mp4")
           source(src=pCData.screencapurl2 type="video/webm")
       .projectpanel__link-box 
-        a.projectpanel__link.btn.btn--basic(href=pCData.livelink )
-          i(class=pCData.livesiteclass) Live Site
-        a.projectpanel__link.btn.btn--basic(href=pCData.livelink )
-          i(class=pCData.githubclass) Github
-        a.projectpanel__link.btn.btn--basic(href=pCData.livelink) 
-          i(class=pCData.documentationclass) Documentation
+        a.projectpanel__link.btn.btn--basic(href=pCData.livelink ) Live Site 
+          i(class=pCData.livesiteclass) 
+        a.projectpanel__link.btn.btn--basic(href=pCData.livelink ) Github 
+          i(class=pCData.githubclass) 
+        a.projectpanel__link.btn.btn--basic(href=pCData.livelink) Documentation 
+          i(class=pCData.documentationclass) 
+        
     .projectchallenge 
       h1.ppheading CHALLENGES: 
       p.ppcsocontent= pCData.challengetext
