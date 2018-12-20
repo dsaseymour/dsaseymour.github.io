@@ -54,3 +54,43 @@
   text-align: center;
   font-size: 2.5rem;
 }
+@include respond(tab-land) {
+  // width < 1200?
+  //
+  .pp-grid__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectso {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include respond(tab-port) {
+  // width < 900?
+  //
+  .pp-grid__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectso {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include respond(phone) {
+  //
+  .pp-grid__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+  }
+}

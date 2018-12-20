@@ -20,35 +20,21 @@
     )
     minmax(0, 1fr)
     [full-end];
-
-  @include respond(tab-land) {
-    // width < 1200?
-    //
-  }
-
-  @include respond(tab-port) {
-    // width < 900?
-    //
-  }
-
-  @include respond(phone) {
-    //
-  }
 }
 .portfoliocontent-box {
-  display: grid;
   grid-column: col-start 1 / col-end 3;
   grid-row: contentrows-start/contentrows-end;
 }
 .contentrow {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 3rem 3rem;
 
   &__card {
     padding: 2rem;
-    width: 90%;
-    height: 90%;
+    width: 26vw;
+    height: 55vh;
     display: flex;
     font-size: 2rem;
     flex-direction: column;
@@ -87,5 +73,227 @@
 
   &__text-box {
     font-size: 2rem;
+  }
+}
+
+.crcbtn {
+  border: 1px solid $color-secondary-light !important;
+}
+
+@include respond(tab-land) {
+  // width < 1200?
+
+  .portfolio-grid__container {
+    display: grid;
+    /*
+        We'll have at least  rows 
+            Nav  / this will probably just contain a back button
+            Content     10
+            Footer //this will probably just contain a back to the top button
+        */
+
+    grid-template-rows:
+      [nav-start]8vh[nav-end contentrows-start] repeat(
+        8,
+        [row-start] minmax(min-content, 20vh) [row-end]
+      )
+      [contentrows-end footer-start]10vh [footer-end];
+    grid-template-columns:
+      [full-start]
+      [full-end];
+  }
+
+  .contentrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem 3rem;
+
+    &__card {
+      padding: 2rem;
+      width: 55vw;
+      height: 90vh;
+      display: flex;
+      font-size: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-secondary-dark;
+      color: $color-secondary-light;
+      border-radius: 2rem;
+      margin-bottom: 1rem;
+      &:not(:last-child) {
+      }
+    }
+  }
+
+  .contentrowcard {
+    &__heading {
+      font-size: 2rem;
+    }
+
+    &__projectname {
+      font-size: 2rem;
+    }
+
+    &__projectechlist {
+      font-size: 2rem;
+    }
+
+    &__content {
+      font-size: 2rem;
+    }
+
+    &__linklist {
+      font-size: 2rem;
+    }
+
+    &__text-box {
+      font-size: 2rem;
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .portfolio-grid__container {
+    display: grid;
+    /*
+        We'll have at least  rows 
+            Nav  / this will probably just contain a back button
+            Content     10
+            Footer //this will probably just contain a back to the top button
+        */
+
+    grid-template-rows:
+      [nav-start]8vh[nav-end contentrows-start] repeat(
+        8,
+        [row-start] minmax(min-content, 20vh) [row-end]
+      )
+      [contentrows-end footer-start]10vh [footer-end];
+    grid-template-columns:
+      [full-start]
+      [full-end];
+  }
+
+  .contentrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem 3rem;
+
+    &__card {
+      padding: 2rem;
+      width: 55vw;
+      height: 70vh;
+      display: flex;
+      font-size: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-secondary-dark;
+      color: $color-secondary-light;
+      border-radius: 2rem;
+      margin-bottom: 1rem;
+      &:not(:last-child) {
+      }
+    }
+  }
+
+  .contentrowcard {
+    &__heading {
+      font-size: 2rem;
+    }
+
+    &__projectname {
+      font-size: 2rem;
+    }
+
+    &__projectechlist {
+      font-size: 2rem;
+    }
+
+    &__content {
+      font-size: 2rem;
+    }
+
+    &__linklist {
+      font-size: 2rem;
+    }
+
+    &__text-box {
+      font-size: 2rem;
+    }
+  }
+}
+
+@include respond(phone) {
+  .portfolio-grid__container {
+    display: grid;
+    /*
+        We'll have at least  rows 
+            Nav  / this will probably just contain a back button
+            Content     10
+            Footer //this will probably just contain a back to the top button
+        */
+
+    grid-template-rows:
+      [nav-start]8vh[nav-end contentrows-start] repeat(
+        8,
+        [row-start] minmax(min-content, 20vh) [row-end]
+      )
+      [contentrows-end footer-start]10vh [footer-end];
+    grid-template-columns:
+      [full-start]
+      [full-end];
+  }
+
+  .contentrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem 3rem;
+
+    &__card {
+      padding: 2rem;
+      width: 100vw;
+      height: 70vh;
+      display: flex;
+      font-size: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-secondary-dark;
+      color: $color-secondary-light;
+      border-radius: 2rem;
+      margin-bottom: 1rem;
+      &:not(:last-child) {
+      }
+    }
+  }
+
+  .contentrowcard {
+    &__heading {
+      font-size: 2rem;
+    }
+
+    &__projectname {
+      font-size: 2rem;
+    }
+
+    &__projectechlist {
+      font-size: 2rem;
+    }
+
+    &__content {
+      font-size: 2rem;
+    }
+
+    &__linklist {
+      font-size: 2rem;
+    }
+
+    &__text-box {
+      font-size: 2rem;
+    }
   }
 }

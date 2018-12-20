@@ -457,18 +457,18 @@ li {
   grid-template-columns: [full-start] minmax(0, 1fr) repeat(3, [col-start] minmax(min-content, 30vw) [col-end]) minmax(0, 1fr) [full-end]; }
 
 .portfoliocontent-box {
-  display: grid;
   grid-column: col-start 1 / col-end 3;
   grid-row: contentrows-start/contentrows-end; }
 
 .contentrow {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 3rem 3rem; }
   .contentrow__card {
     padding: 2rem;
-    width: 90%;
-    height: 90%;
+    width: 26vw;
+    height: 55vh;
     display: flex;
     font-size: 2rem;
     flex-direction: column;
@@ -499,6 +499,135 @@ li {
 .contentrowcard__text-box {
   font-size: 2rem; }
 
+.crcbtn {
+  border: 1px solid #5a2e13 !important; }
+
+@media only screen and (max-width: 75em) {
+  .portfolio-grid__container {
+    display: grid;
+    /*
+        We'll have at least  rows 
+            Nav  / this will probably just contain a back button
+            Content     10
+            Footer //this will probably just contain a back to the top button
+        */
+    grid-template-rows: [nav-start] 8vh [nav-end contentrows-start] repeat(8, [row-start] minmax(min-content, 20vh) [row-end]) [contentrows-end footer-start] 10vh [footer-end];
+    grid-template-columns: [full-start] [full-end]; }
+  .contentrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem 3rem; }
+    .contentrow__card {
+      padding: 2rem;
+      width: 55vw;
+      height: 90vh;
+      display: flex;
+      font-size: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #ca9623;
+      color: #5a2e13;
+      border-radius: 2rem;
+      margin-bottom: 1rem; }
+  .contentrowcard__heading {
+    font-size: 2rem; }
+  .contentrowcard__projectname {
+    font-size: 2rem; }
+  .contentrowcard__projectechlist {
+    font-size: 2rem; }
+  .contentrowcard__content {
+    font-size: 2rem; }
+  .contentrowcard__linklist {
+    font-size: 2rem; }
+  .contentrowcard__text-box {
+    font-size: 2rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .portfolio-grid__container {
+    display: grid;
+    /*
+        We'll have at least  rows 
+            Nav  / this will probably just contain a back button
+            Content     10
+            Footer //this will probably just contain a back to the top button
+        */
+    grid-template-rows: [nav-start] 8vh [nav-end contentrows-start] repeat(8, [row-start] minmax(min-content, 20vh) [row-end]) [contentrows-end footer-start] 10vh [footer-end];
+    grid-template-columns: [full-start] [full-end]; }
+  .contentrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem 3rem; }
+    .contentrow__card {
+      padding: 2rem;
+      width: 55vw;
+      height: 70vh;
+      display: flex;
+      font-size: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #ca9623;
+      color: #5a2e13;
+      border-radius: 2rem;
+      margin-bottom: 1rem; }
+  .contentrowcard__heading {
+    font-size: 2rem; }
+  .contentrowcard__projectname {
+    font-size: 2rem; }
+  .contentrowcard__projectechlist {
+    font-size: 2rem; }
+  .contentrowcard__content {
+    font-size: 2rem; }
+  .contentrowcard__linklist {
+    font-size: 2rem; }
+  .contentrowcard__text-box {
+    font-size: 2rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .portfolio-grid__container {
+    display: grid;
+    /*
+        We'll have at least  rows 
+            Nav  / this will probably just contain a back button
+            Content     10
+            Footer //this will probably just contain a back to the top button
+        */
+    grid-template-rows: [nav-start] 8vh [nav-end contentrows-start] repeat(8, [row-start] minmax(min-content, 20vh) [row-end]) [contentrows-end footer-start] 10vh [footer-end];
+    grid-template-columns: [full-start] [full-end]; }
+  .contentrow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3rem 3rem; }
+    .contentrow__card {
+      padding: 2rem;
+      width: 100vw;
+      height: 70vh;
+      display: flex;
+      font-size: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #ca9623;
+      color: #5a2e13;
+      border-radius: 2rem;
+      margin-bottom: 1rem; }
+  .contentrowcard__heading {
+    font-size: 2rem; }
+  .contentrowcard__projectname {
+    font-size: 2rem; }
+  .contentrowcard__projectechlist {
+    font-size: 2rem; }
+  .contentrowcard__content {
+    font-size: 2rem; }
+  .contentrowcard__linklist {
+    font-size: 2rem; }
+  .contentrowcard__text-box {
+    font-size: 2rem; } }
+
 .pp-grid__container {
   display: grid;
   grid-template-rows: [ppnav-start] 10vh [ppnav-end ppcontentrow-start] 143vh [ppcontentrow-end ppfooter-start] 20vh [ppfooter-end]; }
@@ -528,6 +657,30 @@ li {
   padding: 2rem;
   text-align: center;
   font-size: 2.5rem; }
+
+@media only screen and (max-width: 75em) {
+  .pp-grid__container {
+    display: flex;
+    flex-direction: column; }
+  .projectso {
+    display: flex;
+    flex-direction: column; } }
+
+@media only screen and (max-width: 56.25em) {
+  .pp-grid__container {
+    display: flex;
+    flex-direction: column; }
+  .projectso {
+    display: flex;
+    flex-direction: column; } }
+
+@media only screen and (max-width: 37.5em) {
+  .pp-grid__container {
+    display: flex;
+    flex-direction: column; }
+  .project-content {
+    display: flex;
+    flex-direction: column; } }
 
 .navigation {
   padding: 0.5rem;
