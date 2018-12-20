@@ -1,6 +1,7 @@
 // ================================================
 // NAVIGATION BEGINS
 // ================================================
+
 .navigation {
   padding: 0.5rem;
   //  background-color: blue;
@@ -53,6 +54,136 @@
 #navimg {
   max-width: 3rem;
 }
+
+.navigation__checkbox {
+  //we never want to see the checkbox it's used as a trigger
+  display: none;
+  &:checked ~ .navigation__background {
+    transform: scale(80);
+  }
+
+  &:checked ~ .navigation__nav {
+    width: 100vw;
+    opacity: 1;
+  }
+
+  &:checked + .navigation__button .navigation__icon {
+    background-color: transparent; //make the span element invisible then use the pseudo elements to form an x
+  }
+
+  &:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+.navigation__nav {
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navigation__button {
+  color: $color-secondary-dark;
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  //  top: 6rem;
+  //  left: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  //  top: 6.5rem;
+  //  left: 6.5rem;
+  position: fixed;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    $color-secondary-light,
+    $color-secondary-dark
+  );
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.navigation__navlist {
+  font-family: "Fjalla One", sans-serif;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+  // text-align: center;
+}
+.navigation__navitem {
+  margin: 1rem;
+}
+.navigation__navlink {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      white 50%
+    );
+    background-size: 220%;
+    transition: all 0.4s;
+  }
+  &:hover,
+  &:active {
+    background-position: 100%;
+    color: $color-secondary-dark;
+    transform: translateX(1rem);
+  }
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem;
+  &,
+  &::before,
+  &::after {
+    width: 3rem;
+    height: 2px;
+    background-color: $color-secondary-dark;
+    display: inline-block;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  &::before {
+    top: -0.8rem;
+  }
+  &::after {
+    top: 0.8rem;
+  }
+}
 // ================================================
 // NAVIGATION RESPONSIVE DEFINITION BEGINS
 // ================================================
@@ -61,73 +192,61 @@
   .navigation {
     &__logo-box {
     }
-
     &__centercontent-box {
     }
-
     &__list-box {
     }
-
     &__item {
     }
   }
-
   #navigation__centercontent-heading {
   }
-
   #navimg {
   }
 }
 // NAVIGATION RSP TAB-LAND ENDS----------------------------------
 // NAVIGATION RSP TAB-PORT BEGINS----------------------------------
-
 @include respond(tab-port) {
   .navigation {
     &__logo-box {
     }
-
     &__centercontent-box {
     }
-
     &__list-box {
+      display: none;
     }
-
     &__item {
+      display: none;
     }
   }
-
   #navigation__centercontent-heading {
   }
-
   #navimg {
   }
 }
 // NAVIGATION RSP TAB-PORT ENDS----------------------------------
 // NAVIGATION RSP PHONE BEGINS----------------------------------
-
 @include respond(phone) {
   .navigation {
     display: flex;
     flex-direction: row;
-
     &__logo-box {
       margin-right: 45vw;
     }
-
+    .navigation-logopic {
+      display: none;
+    }
     &__centercontent-box {
     }
-
     &__list-box {
       display: none;
     }
-
     &__item {
+      display: none;
     }
   }
-
   #navigation__centercontent-heading {
   }
-
   #navimg {
   }
 }

@@ -29,12 +29,28 @@
     <!-- NAVBAR START -->
     <div class="navigation">
         <div class="navigation__logo-box">
-            <a href="./index.html">
+            <a class="navigation-logopic" href="./index.html">
                     <picture class="navigation__logo">
                             <source srcset="img/logo.png" media="(max-width: 37.5em)">
                             <img id="navimg" srcset="img/logo.png" alt="Full logo" src="img/logo.png">
                         </picture>            
             </a>
+
+
+
+
+
+            <input type="checkbox" id="navig-toggle"  class="navigation__checkbox">
+            <label for="navig-toggle" class="navigation__button">
+                <span class="navigation__icon">
+                    &nbsp;
+                </span>
+            </label>
+            <div class="navigation__background">
+            &nbsp;
+            </div>
+            
+
         </div>
 
         <div class="navigation__centercontent-box">
@@ -63,7 +79,26 @@
                     </ul>
 
         </div>
+    </div>
 
+    <div class="navigation__nav">
+                <ul class="navigation__navlist list">
+                        <li class="navigation__navitem">
+                            <a href="./index.html" class="navigation__navlink btn-text">Home</a>
+                        </li>
+                        <li class="navigation__navitem">
+                            <a href="./portfolio.html" class="navigation__navlink btn-text">Portfolio</a>
+                        </li>
+                        <li class="navigation__navitem">
+                            <a href="#aboutsection" class="navigation__navlink btn-text">About</a>
+                        </li>
+                        <li class="navigation__navitem btn-text">
+                            <a href="#contactsection" class="navigation__navlink btn-text">Contact</a>
+                        </li>
+                        <li class="navigation__navitem">
+                            <a href="./public/dannyseymour_resume.pdf" download="Danny Seymour Resume" class="navigation__navlink btn-text"><i class="fas fa-download"></i>Resume</a>
+                        </li>
+                    </ul>
     </div>
     <!-- NAVBAR END -->
     <header class="header">
