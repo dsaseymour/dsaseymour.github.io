@@ -98,9 +98,13 @@
 // HEADER RSP TAB-PORT BEGINS----------------------------------
 @include respond(tab-port) {
   .header {
+    display: flex;
+    flex-direction: column;
   }
   .hpanel {
     &__content {
+      display: flex;
+      flex-direction: column;
     }
     &__media-box {
     }
