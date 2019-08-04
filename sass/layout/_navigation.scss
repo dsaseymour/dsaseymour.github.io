@@ -1,0 +1,267 @@
+// ================================================
+// NAVIGATION BEGINS
+// ================================================
+
+.navigation {
+  padding: 0.5rem;
+  //  background-color: blue;
+  grid-column: full-start / full-end;
+  grid-row: nav-start/nav-end;
+  display: grid;
+  grid-template-columns: 0.3fr [leftcol-start]min-content [leftcol-end] 1fr [middlecol-start] 20rem [middlecol-end] 1fr [rightcol-start] 50rem [rightcol-end] 0.3fr;
+
+  &__logo-box {
+    grid-column: leftcol-start / leftcol-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //    background-color: red;
+  }
+
+  &__centercontent-box {
+    grid-column: middlecol-start / middlecol-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list-box {
+    grid-column: rightcol-start / rightcol-end;
+    display: flex;
+    align-items: center;
+    //   background-color: green;
+  }
+
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 0.8rem;
+    }
+  }
+
+  background-color: transparent !important;
+}
+
+#navigation__centercontent-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: $color-secondary-light;
+  font-family: "Lora", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#navimg {
+  max-width: 3rem;
+}
+
+.navigation__checkbox {
+  //we never want to see the checkbox it's used as a trigger
+  display: none;
+  &:checked ~ .navigation__background {
+    transform: scale(80);
+  }
+
+  &:checked ~ .navigation__nav {
+    width: 100vw;
+    opacity: 100;
+  }
+
+  &:checked + .navigation__button .navigation__icon {
+    background-color: transparent; //make the span element invisible then use the pseudo elements to form an x
+  }
+
+  &:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+.navigation__nav {
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navigation__button {
+  color: $color-secondary-dark;
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 7rem;
+  //  left: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid $color-secondary-dark;
+}
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  top: 7.5rem;
+  //  left: 6.5rem;
+  position: fixed;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    $color-secondary-light,
+    $color-secondary-dark
+  );
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.navigation__navlist {
+  font-family: "Fjalla One", sans-serif;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+  // text-align: center;
+}
+#navigation__navheading {
+  color: white;
+}
+.navigation__navitem {
+  margin: 1rem;
+}
+.navigation__navlink {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      white 50%
+    );
+    background-size: 220%;
+    transition: all 0.4s;
+  }
+  &:hover,
+  &:active {
+    background-position: 100%;
+    color: $color-secondary-dark;
+    transform: translateX(1rem);
+  }
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 3.5rem;
+  &,
+  &::before,
+  &::after {
+    width: 3rem;
+    height: 2px;
+    background-color: $color-secondary-dark;
+    display: inline-block;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+  &::before {
+    top: -0.8rem;
+  }
+  &::after {
+    top: 0.8rem;
+  }
+}
+// ================================================
+// NAVIGATION RESPONSIVE DEFINITION BEGINS
+// ================================================
+// NAVIGATION RSP TAB-LAND BEGINS----------------------------------
+@include respond(tab-land) {
+  .navigation {
+    &__logo-box {
+    }
+    &__centercontent-box {
+    }
+    &__list-box {
+    }
+    &__item {
+    }
+  }
+  #navigation__centercontent-heading {
+  }
+  #navimg {
+  }
+}
+// NAVIGATION RSP TAB-LAND ENDS----------------------------------
+// NAVIGATION RSP TAB-PORT BEGINS----------------------------------
+@include respond(tab-port) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    &__logo-box {
+      margin-right: 45vw;
+      margin-left: 10vw;
+    }
+    &__centercontent-box {
+    }
+    &__list-box {
+      display: none;
+    }
+    &__item {
+      display: none;
+    }
+  }
+  #navigation__centercontent-heading {
+  }
+  #navimg {
+  }
+}
+// NAVIGATION RSP TAB-PORT ENDS----------------------------------
+// NAVIGATION RSP PHONE BEGINS----------------------------------
+@include respond(phone) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    &__logo-box {
+      margin-right: 45vw;
+    }
+    .navigation-logopic {
+    }
+    &__centercontent-box {
+    }
+    &__list-box {
+      display: none;
+    }
+    &__item {
+      display: none;
+    }
+  }
+  #navigation__centercontent-heading {
+  }
+  #navimg {
+  }
+}
+// NAVIGATION RSP PHONE ENDS----------------------------------
+// ================================================
+// NAVIGATION RESPONSIVE DEFINITION ENDS
+// ================================================
+// ================================================
+// NAVIGATION ENDS
+// ================================================

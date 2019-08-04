@@ -1,0 +1,66 @@
+.portfolionavigation {
+  padding: 0.5rem;
+  //  background-color: blue;
+  grid-column: full-start / full-end;
+  grid-row: nav-start/nav-end;
+  display: grid;
+  grid-template-columns: 0.3fr [leftcol-start]min-content [leftcol-end] 1fr [middlecol-start] 20rem [middlecol-end] 1fr [rightcol-start] 30rem [rightcol-end] 0.3fr;
+
+  @include respond(tab-land) {
+    // width < 1200?
+    //
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    //
+  }
+
+  @include respond(phone) {
+    //
+  }
+
+  &__logo-box {
+    grid-column: leftcol-start / leftcol-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //    background-color: red;
+  }
+
+  &__centercontent-box {
+    grid-column: middlecol-start / middlecol-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list-box {
+    grid-column: rightcol-start / rightcol-end;
+    display: flex;
+    align-items: center;
+    //   background-color: green;
+  }
+
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 0.8rem;
+    }
+  }
+
+  background-color: transparent !important;
+}
+
+#portfolionavigation__centercontent-heading {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: $color-secondary-light;
+  font-family: "Lora", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#portfolionavimg {
+  max-width: 3rem;
+}

@@ -1,0 +1,96 @@
+.pp-grid__container {
+  display: grid;
+  grid-template-rows:
+    [ppnav-start]10vh[ppnav-end ppcontentrow-start] 143vh
+    [ppcontentrow-end ppfooter-start]20vh[ppfooter-end];
+
+  @include respond(tab-land) {
+    // width < 1200?
+    //
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    //
+  }
+
+  @include respond(phone) {
+    //
+  }
+}
+
+.project-content {
+  grid-row: ppcontentrow-start/ppcontentrow-end;
+  display: grid;
+  grid-template-rows: [projectpanel-start] 80vh [projectpanel-end projectchallenge-start] 40vh [projectchallenge-end projectso-start] 40vh [projectso-end];
+  grid-template-columns:
+    [full-start] repeat(3, [col-start] minmax(min-content, 30vw) [col-end])
+    [full-end];
+}
+
+.projectchallenge {
+  padding: 2rem;
+  grid-row: projectchallenge-start/projectchallenge-end;
+  //  background-color: red;
+}
+
+.projectso {
+  grid-row: projectso-start/projectso-end;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  //  background-color: blue;
+}
+
+.projectsolution {
+  padding: 2rem;
+}
+
+.projectoutcome {
+  padding: 2rem;
+}
+
+.ppcsocontent {
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+@include respond(tab-land) {
+  // width < 1200?
+  //
+  .pp-grid__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectso {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include respond(tab-port) {
+  // width < 900?
+  //
+  .pp-grid__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectso {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include respond(phone) {
+  //
+  .pp-grid__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+  }
+}

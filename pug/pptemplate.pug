@@ -1,0 +1,34 @@
+include ./mixins/projectcontent.pug
+include ./mixins/projecthead.pug
+include ./mixins/projectnav.pug
+include ./mixins/projectfooter.pug
+doctype html
+html.no-js(lang="en")
+  +projectHead({
+                  title:"Project Title",
+  })
+  body.pp-grid__container
+  +projectNav({
+                  projectname:"Project Name"
+          })
+  +projectContent({
+            projectpitch:"How do we accomplish xyz?",
+            projectname:"Project Name",
+            techstackclass1: "fab fa-node",
+            techstackclass2: "fab fa-node",
+            techstackclass3: "fab fa-node",
+            livesiteclass:"fas fa-heartbeat",
+            githubclass:"fab fa-github-square",
+            documentationclass:"fas fa-briefcase",
+            projectstatus:"Under Construction",
+            screencapurl1:"./img/video.webm",       screencapurl2:"./img/video.mp4",
+            livelink:"#", 
+            github:"#",
+            documentation:"#",
+            challengetext:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione laborum explicabo ut, reprehenderit quia vitae ullam eius quibusdam expedita excepturi deserunt. Labore ipsa animi inventore eos, provident possimus tenetur.",
+            solutiontext:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione laborum explicabo ut, reprehenderit quia vitae ullam eius quibusdam expedita excepturi deserunt. Labore ipsa animi inventore eos, provident possimus tenetur.",
+            outcometext:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione laborum explicabo ut, reprehenderit quia vitae ullam eius quibusdam expedita excepturi deserunt. Labore ipsa animi inventore eos, provident possimus tenetur.",     
+  })
+  +projectFooter({
+          })
+         

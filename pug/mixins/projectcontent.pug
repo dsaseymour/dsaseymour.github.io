@@ -1,0 +1,29 @@
+mixin projectContent(pCData)
+  section.project-content
+    .projectpanel 
+      .projectpanel__heading 
+        h1= pCData.projectname
+      .projectpanel__status     
+        p= pCData.projectstatus
+      .projectpanel__media 
+        video.projectpanelvideo( autoplay muted loop) 
+          source(src=pCData.screencapurl1 type="video/mp4")
+          source(src=pCData.screencapurl2 type="video/webm")
+      .projectpanel__link-box 
+        a.projectpanel__link.btn.btn--basic(href=pCData.livelink ) Live Site 
+          i(class=pCData.livesiteclass) 
+        a.projectpanel__link.btn.btn--basic(href=pCData.github ) Github 
+          i(class=pCData.githubclass) 
+        a.projectpanel__link.btn.btn--basic(href=pCData.documentation) Documentation 
+          i(class=pCData.documentationclass) 
+        
+    .projectchallenge 
+      h1.ppheading CHALLENGES: 
+      p.ppcsocontent= pCData.challengetext
+    .projectso
+      .projectsolution 
+        h1.ppheading SOLUTION:
+        p.ppcsocontent= pCData.solutiontext
+      .projectoutcome 
+        h1.ppheading OUTCOME:
+        p.ppcsocontent= pCData.outcometext

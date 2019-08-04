@@ -1,0 +1,49 @@
+.projectpanel {
+  grid-row: projectpanel-start/projectpanel-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.3rem;
+
+  &__media video {
+    height: 60vh;
+    width: 60vw;
+  }
+
+  &__media {
+    margin: 1rem 0;
+  }
+
+  &__link-box {
+  }
+
+  &__link-box a {
+    margin-top: 0.9rem;
+    &:not(:last-child) {
+      margin-right: 0.9rem;
+    }
+  }
+
+  &__heading {
+  }
+
+  &__status {
+  }
+
+  &__content {
+  }
+}
+
+@include respond(tab-land) {
+  // width < 1200?
+  //
+}
+
+@include respond(tab-port) {
+  // width < 900?
+  //
+}
+
+@include respond(phone) {
+  //
+}
